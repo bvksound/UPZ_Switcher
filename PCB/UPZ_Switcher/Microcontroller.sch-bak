@@ -1,0 +1,315 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 3 6
+Title "Microcontroller Board"
+Date "2021-02-28"
+Rev "1"
+Comp "BVKSound"
+Comment1 "UPZ Switcher"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L arduino:Arduino_Micro_Socket XA1
+U 1 1 61135274
+P 8110 4900
+AR Path="/62E2A5B6/61135274" Ref="XA1"  Part="1" 
+AR Path="/62E5E929/61135274" Ref="XA?"  Part="1" 
+F 0 "XA1" H 8110 6137 60  0000 C CNN
+F 1 "Arduino_Micro_Socket" H 8110 6031 60  0000 C CNN
+F 2 "BVKSound:Arduino_Micro_Socket" H 9910 8650 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-micro" H 9910 8650 60  0001 C CNN
+	1    8110 4900
+	1    0    0    -1  
+$EndComp
+Text HLabel 5570 4400 0    50   Input ~ 0
+I2C_SCK
+Text HLabel 5570 4300 0    50   Input ~ 0
+I2C_SDA
+Wire Wire Line
+	5570 4300 5680 4300
+Wire Wire Line
+	5570 4400 5990 4400
+$Comp
+L Device:R_Small_US R47
+U 1 1 63459BC8
+P 5990 4130
+F 0 "R47" H 6058 4176 50  0000 L CNN
+F 1 "4K7" H 6058 4085 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5990 4130 50  0001 C CNN
+F 3 "~" H 5990 4130 50  0001 C CNN
+	1    5990 4130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R46
+U 1 1 6345AC9C
+P 5680 4130
+F 0 "R46" H 5748 4176 50  0000 L CNN
+F 1 "4K7" H 5748 4085 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5680 4130 50  0001 C CNN
+F 3 "~" H 5680 4130 50  0001 C CNN
+	1    5680 4130
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5680 4230 5680 4300
+Connection ~ 5680 4300
+Wire Wire Line
+	5680 4300 6810 4300
+Connection ~ 5990 4400
+Wire Wire Line
+	5990 4400 6810 4400
+Wire Wire Line
+	5990 4230 5990 4400
+Text HLabel 5560 3700 0    50   Input ~ 0
+5V
+Wire Wire Line
+	5560 3700 5680 3700
+Wire Wire Line
+	5990 3700 5990 4030
+Wire Wire Line
+	5680 4030 5680 3700
+Connection ~ 5680 3700
+Wire Wire Line
+	5680 3700 5990 3700
+Wire Wire Line
+	5990 3700 6360 3700
+Wire Wire Line
+	6360 3700 6360 5700
+Wire Wire Line
+	6360 5700 6810 5700
+Connection ~ 5990 3700
+Text HLabel 5550 5400 0    50   Input ~ 0
+GND
+Wire Wire Line
+	6810 5400 6590 5400
+Wire Wire Line
+	6810 5500 6590 5500
+Wire Wire Line
+	6590 5500 6590 5400
+Connection ~ 6590 5400
+Wire Wire Line
+	6590 5400 5550 5400
+$Comp
+L BVKSound:MAX232ECPE+ IC1
+U 1 1 6346004C
+P 7590 1480
+F 0 "IC1" H 8190 1745 50  0000 C CNN
+F 1 "MAX232ECPE+" H 8190 1654 50  0000 C CNN
+F 2 "DIP762W56P254L1918H457Q16N" H 8640 1580 50  0001 L CNN
+F 3 "http://docs-emea.rs-online.com/webdocs/139d/0900766b8139dea1.pdf" H 8640 1480 50  0001 L CNN
+F 4 "MAX232ECPE+, Line Transceiver, EIA/TIA-232-E, RS-232, V.28 2-TX 2-RX 2-TRX, 5 V, 16-Pin PDIP" H 8640 1380 50  0001 L CNN "Description"
+F 5 "4.572" H 8640 1280 50  0001 L CNN "Height"
+F 6 "Maxim Integrated" H 8640 1180 50  0001 L CNN "Manufacturer_Name"
+F 7 "MAX232ECPE+" H 8640 1080 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "700-MAX232ECPE" H 8640 980 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX232ECPE%2b?qs=1THa7WoU59GfhRLu57%252Btjw%3D%3D" H 8640 880 50  0001 L CNN "Mouser Price/Stock"
+	1    7590 1480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6570 4100 6570 2860
+Wire Wire Line
+	6570 2860 9300 2860
+Wire Wire Line
+	9300 2860 9300 1980
+Wire Wire Line
+	9300 1980 8790 1980
+Wire Wire Line
+	8790 1880 9380 1880
+Wire Wire Line
+	9380 1880 9380 2930
+Wire Wire Line
+	9380 2930 6640 2930
+Wire Wire Line
+	6640 2930 6640 4000
+Wire Wire Line
+	6640 4000 6810 4000
+Wire Wire Line
+	6810 4100 6570 4100
+$Comp
+L BVKSound:5747844-6 J1
+U 1 1 63464424
+P 11090 1140
+F 0 "J1" V 10909 1140 50  0000 C CNN
+F 1 "5747844-6" V 11000 1140 50  0000 C CNN
+F 2 "57478446" H 11940 1440 50  0001 L CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F5747844%7FP%7Fpdf%7FEnglish%7FENG_CD_5747844_P.pdf%7F5747844-6" H 11940 1340 50  0001 L CNN
+F 4 "9 way r/a PCB D socket w/screw lock,6A" H 11940 1240 50  0001 L CNN "Description"
+F 5 "12" H 11940 1140 50  0001 L CNN "Height"
+F 6 "TE Connectivity" H 11940 1040 50  0001 L CNN "Manufacturer_Name"
+F 7 "5747844-6" H 11940 940 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "571-5747844-6" H 11940 840 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/5747844-6?qs=x6EjVpvqMVNBaI3EeeZZVw%3D%3D" H 11940 740 50  0001 L CNN "Mouser Price/Stock"
+F 10 "5747844-6" H 11940 640 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/5747844-6/te-connectivity" H 11940 540 50  0001 L CNN "Arrow Price/Stock"
+	1    11090 1140
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8790 1680 10120 1680
+Wire Wire Line
+	10120 1680 10120 2430
+Wire Wire Line
+	10120 2430 11850 2430
+Wire Wire Line
+	11850 2430 11850 1740
+Wire Wire Line
+	11850 1740 11590 1740
+Wire Wire Line
+	11590 1640 11910 1640
+Wire Wire Line
+	11910 1640 11910 2500
+Wire Wire Line
+	11910 2500 10060 2500
+Wire Wire Line
+	10060 2500 10060 1780
+Wire Wire Line
+	10060 1780 8790 1780
+Wire Wire Line
+	6360 3700 6360 1010
+Wire Wire Line
+	6360 1010 7250 1010
+Wire Wire Line
+	9060 1010 9060 1480
+Wire Wire Line
+	9060 1480 8790 1480
+Connection ~ 6360 3700
+$Comp
+L power:GND #PWR0124
+U 1 1 63469C2A
+P 9430 1420
+F 0 "#PWR0124" H 9430 1170 50  0001 C CNN
+F 1 "GND" H 9435 1247 50  0000 C CNN
+F 2 "" H 9430 1420 50  0001 C CNN
+F 3 "" H 9430 1420 50  0001 C CNN
+	1    9430 1420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8790 1580 9150 1580
+Wire Wire Line
+	9150 1580 9150 1350
+Wire Wire Line
+	9150 1350 9430 1350
+Wire Wire Line
+	9430 1350 9430 1420
+$Comp
+L Device:CP_Small C19
+U 1 1 6346B389
+P 6790 1580
+F 0 "C19" H 6878 1626 50  0000 L CNN
+F 1 "1uF" H 6878 1535 50  0000 L CNN
+F 2 "" H 6790 1580 50  0001 C CNN
+F 3 "~" H 6790 1580 50  0001 C CNN
+	1    6790 1580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7590 1480 6790 1480
+Wire Wire Line
+	7590 1680 6790 1680
+$Comp
+L Device:CP_Small C22
+U 1 1 634703D5
+P 7250 1290
+F 0 "C22" H 7338 1336 50  0000 L CNN
+F 1 "1uF" H 7338 1245 50  0000 L CNN
+F 2 "" H 7250 1290 50  0001 C CNN
+F 3 "~" H 7250 1290 50  0001 C CNN
+	1    7250 1290
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7590 1580 7250 1580
+Wire Wire Line
+	7250 1580 7250 1390
+Wire Wire Line
+	7250 1190 7250 1010
+Connection ~ 7250 1010
+Wire Wire Line
+	7250 1010 9060 1010
+$Comp
+L Device:CP_Small C20
+U 1 1 63476199
+P 6790 1880
+F 0 "C20" H 6878 1926 50  0000 L CNN
+F 1 "1uF" H 6878 1835 50  0000 L CNN
+F 2 "" H 6790 1880 50  0001 C CNN
+F 3 "~" H 6790 1880 50  0001 C CNN
+	1    6790 1880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7590 1780 6790 1780
+Wire Wire Line
+	7590 1880 7040 1880
+Wire Wire Line
+	7040 1880 7040 1980
+Wire Wire Line
+	7040 1980 6790 1980
+$Comp
+L Device:CP_Small C21
+U 1 1 6347B1D9
+P 6790 2160
+F 0 "C21" H 6702 2114 50  0000 R CNN
+F 1 "1uF" H 6702 2205 50  0000 R CNN
+F 2 "" H 6790 2160 50  0001 C CNN
+F 3 "~" H 6790 2160 50  0001 C CNN
+	1    6790 2160
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7590 1980 7240 1980
+Wire Wire Line
+	7240 1980 7240 2060
+Wire Wire Line
+	6790 2060 7240 2060
+$Comp
+L power:GND #PWR0125
+U 1 1 63485EA8
+P 6790 2310
+F 0 "#PWR0125" H 6790 2060 50  0001 C CNN
+F 1 "GND" H 6795 2137 50  0000 C CNN
+F 2 "" H 6790 2310 50  0001 C CNN
+F 3 "" H 6790 2310 50  0001 C CNN
+	1    6790 2310
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6790 2310 6790 2260
+$Comp
+L power:GND #PWR0126
+U 1 1 6348982D
+P 12220 1440
+F 0 "#PWR0126" H 12220 1190 50  0001 C CNN
+F 1 "GND" H 12225 1267 50  0000 C CNN
+F 2 "" H 12220 1440 50  0001 C CNN
+F 3 "" H 12220 1440 50  0001 C CNN
+	1    12220 1440
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11590 1440 12220 1440
+Wire Wire Line
+	11590 1540 11780 1540
+Wire Wire Line
+	11780 1540 11780 2370
+Wire Wire Line
+	11780 2370 10190 2370
+Wire Wire Line
+	10190 2370 10190 1740
+Wire Wire Line
+	10190 1740 10590 1740
+Wire Wire Line
+	10590 1640 10450 1640
+Wire Wire Line
+	10450 1640 10450 1540
+Wire Wire Line
+	10450 1540 10590 1540
+$EndSCHEMATC
