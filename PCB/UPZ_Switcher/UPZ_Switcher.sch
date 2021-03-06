@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -32,27 +32,33 @@ F0 "MicroController Board" 50
 F1 "Microcontroller.sch" 50
 F2 "I2C_SCK" I R 5270 1730 50 
 F3 "I2C_SDA" I R 5270 1660 50 
+F4 "5V" I L 3940 1660 50 
+F5 "GND" I L 3940 1760 50 
 $EndSheet
 $Sheet
-S 3950 4940 1330 880 
+S 1510 3370 1330 880 
 U 62E5E929
 F0 "Power Supply Board" 50
 F1 "Power Supply.sch" 50
+F2 "Phantom_48V_COLD_A" I R 2840 3870 50 
+F3 "Phantom_48V_HOT_A" I R 2840 3790 50 
+F4 "Phantom_48V_COLD_B" I R 2840 4030 50 
+F5 "Phantom_48V_HOT_B" I R 2840 3950 50 
+F6 "5V" I R 2840 3450 50 
+F7 "Phantom_GND" I R 2840 4110 50 
+F8 "5V_Gnd" I R 2840 3520 50 
 $EndSheet
 $Sheet
 S 8230 1510 1330 880 
 U 62E5E978
 F0 "Relay Board" 50
 F1 "RelayBoard.sch" 50
-F2 "Phantom_48V" I L 8230 2200 50 
-F3 "BUS_RELAY_COIL" I L 8230 1650 50 
-F4 "GND" I L 8230 2290 50 
-$EndSheet
-$Sheet
-S 1660 3540 1330 880 
-U 62E8A761
-F0 "PhantomPower" 50
-F1 "PhantomPower.sch" 50
+F2 "BUS_RELAY_COIL" I L 8230 1650 50 
+F3 "GND" I L 8230 2310 50 
+F4 "Phantom_48V_HOT_A" I L 8230 1950 50 
+F5 "Phantom_48V_COLD_A" I L 8230 2050 50 
+F6 "Phantom_48V_HOT_B" I L 8230 2140 50 
+F7 "Phantom_48V_COLD_B" I L 8230 2230 50 
 $EndSheet
 Wire Bus Line
 	7440 1650 8230 1650
@@ -60,4 +66,65 @@ Wire Wire Line
 	5270 1660 6110 1660
 Wire Wire Line
 	5270 1730 6110 1730
+Wire Wire Line
+	2840 3790 7580 3790
+Wire Wire Line
+	7580 3790 7580 1950
+Wire Wire Line
+	7580 1950 8230 1950
+Wire Wire Line
+	8230 2050 7700 2050
+Wire Wire Line
+	7700 2050 7700 3870
+Wire Wire Line
+	7700 3870 2840 3870
+Wire Wire Line
+	2840 3950 7820 3950
+Wire Wire Line
+	7820 3950 7820 2140
+Wire Wire Line
+	7820 2140 8230 2140
+Wire Wire Line
+	2840 4030 7950 4030
+Wire Wire Line
+	7950 4030 7950 2230
+Wire Wire Line
+	7950 2230 8230 2230
+Wire Wire Line
+	8230 2310 8080 2310
+Wire Wire Line
+	8080 2310 8080 4110
+Wire Wire Line
+	8080 4110 2840 4110
+Wire Wire Line
+	2840 3450 3250 3450
+Wire Wire Line
+	3250 3450 3250 1660
+Wire Wire Line
+	3250 1660 3940 1660
+Wire Wire Line
+	2840 3520 3340 3520
+Wire Wire Line
+	3340 3520 3340 1760
+Wire Wire Line
+	3340 1760 3940 1760
+Wire Wire Line
+	6110 1890 5450 1890
+Wire Wire Line
+	5450 1890 5450 2180
+Wire Wire Line
+	5450 3450 3250 3450
+Connection ~ 3250 3450
+Wire Wire Line
+	6110 1980 5530 1980
+Wire Wire Line
+	5530 1980 5530 3520
+Wire Wire Line
+	5530 3520 3340 3520
+Connection ~ 3340 3520
+Wire Wire Line
+	6110 2180 5450 2180
+Connection ~ 5450 2180
+Wire Wire Line
+	5450 2180 5450 3450
 $EndSCHEMATC

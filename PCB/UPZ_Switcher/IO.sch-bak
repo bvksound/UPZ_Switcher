@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 6
+Sheet 2 5
 Title "IO Board"
 Date "2021-02-28"
 Rev "1"
@@ -2952,7 +2952,7 @@ Wire Wire Line
 Wire Wire Line
 	850  5100 1150 5100
 Wire Wire Line
-	1150 5100 1150 3340
+	1150 5100 1150 3940
 Wire Wire Line
 	1150 3340 1490 3340
 $Comp
@@ -3021,7 +3021,7 @@ Connection ~ 1150 3340
 Text HLabel 850  4930 0    50   Input ~ 0
 GND
 Wire Wire Line
-	850  4930 2630 4930
+	850  4930 1680 4930
 Wire Wire Line
 	2630 4930 2630 4470
 $Comp
@@ -3047,16 +3047,67 @@ Wire Wire Line
 Wire Wire Line
 	6430 4930 6430 6160
 Wire Wire Line
-	6430 6160 8330 6160
+	6430 6160 7410 6160
 Wire Wire Line
 	8330 6160 8330 5910
 Connection ~ 2630 4930
 Wire Wire Line
 	6430 4930 6430 3330
 Wire Wire Line
-	6430 3330 8330 3330
+	6430 3330 7300 3330
 Wire Wire Line
 	8330 3330 8330 3190
+Connection ~ 6430 4930
+Wire Wire Line
+	7630 2690 7300 2690
+Wire Wire Line
+	7300 2690 7300 2790
+Connection ~ 7300 3330
+Wire Wire Line
+	7300 3330 8330 3330
+Wire Wire Line
+	7630 2790 7300 2790
+Connection ~ 7300 2790
+Wire Wire Line
+	7300 2790 7300 2890
+Wire Wire Line
+	7630 2890 7300 2890
+Connection ~ 7300 2890
+Wire Wire Line
+	7300 2890 7300 3330
+Wire Wire Line
+	7630 5610 6610 5610
+Wire Wire Line
+	6610 5610 6610 5100
+Connection ~ 6610 5100
+Wire Wire Line
+	7630 5510 7410 5510
+Wire Wire Line
+	7410 5510 7410 6160
+Connection ~ 7410 6160
+Wire Wire Line
+	7410 6160 8330 6160
+Wire Wire Line
+	7630 5410 7410 5410
+Wire Wire Line
+	7410 5410 7410 5510
+Connection ~ 7410 5510
+Wire Wire Line
+	1930 3940 1150 3940
+Connection ~ 1150 3940
+Wire Wire Line
+	1150 3940 1150 3340
+Wire Wire Line
+	1930 4040 1680 4040
+Wire Wire Line
+	1680 4040 1680 4930
+Connection ~ 1680 4930
+Wire Wire Line
+	1680 4930 2630 4930
+Wire Wire Line
+	1930 3840 1680 3840
+Wire Wire Line
+	1680 3840 1680 4040
 Wire Bus Line
 	14940 6260 15080 6260
 Wire Bus Line
@@ -3099,5 +3150,5 @@ Wire Bus Line
 	2570 5380 2570 10880
 Wire Bus Line
 	1550 5380 1550 10880
-Connection ~ 6430 4930
+Connection ~ 1680 4040
 $EndSCHEMATC

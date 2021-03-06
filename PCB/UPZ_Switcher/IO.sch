@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 6
+Sheet 2 5
 Title "IO Board"
 Date "2021-02-28"
 Rev "1"
@@ -3108,6 +3108,7 @@ Wire Wire Line
 	1930 3840 1680 3840
 Wire Wire Line
 	1680 3840 1680 4040
+Connection ~ 1680 4040
 Wire Bus Line
 	14940 6260 15080 6260
 Wire Bus Line
@@ -3150,5 +3151,4 @@ Wire Bus Line
 	2570 5380 2570 10880
 Wire Bus Line
 	1550 5380 1550 10880
-Connection ~ 1680 4040
 $EndSCHEMATC

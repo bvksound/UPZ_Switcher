@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 5 6
+Sheet 5 5
 Title "Relay Board"
 Date "2021-02-27"
 Rev "1"
@@ -1097,12 +1097,10 @@ Text Label 3710 5600 0    50   ~ 0
 K17+
 Text Label 3710 5690 0    50   ~ 0
 K17-
-Text HLabel 1270 6200 0    50   Input ~ 0
-Phantom_48V
+Text HLabel 2060 6190 0    50   Input ~ 0
+Phantom_48V_HOT_A
 Wire Wire Line
 	3640 6190 3680 6190
-Wire Wire Line
-	1270 6200 1430 6200
 Wire Wire Line
 	2590 6290 2400 6290
 Wire Wire Line
@@ -1113,47 +1111,10 @@ Entry Wire Line
 	4050 6190 3950 6290
 Wire Wire Line
 	2400 6640 3950 6640
-$Comp
-L Device:R_US R41
-U 1 1 6067E759
-P 1430 6350
-AR Path="/62E5E978/6067E759" Ref="R41"  Part="1" 
-AR Path="/62E8A761/6067E759" Ref="R?"  Part="1" 
-F 0 "R41" H 1498 6396 50  0000 L CNN
-F 1 "6K8" H 1498 6305 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1470 6340 50  0001 C CNN
-F 3 "~" H 1430 6350 50  0001 C CNN
-	1    1430 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R40
-U 1 1 6067F0FC
-P 1430 6050
-AR Path="/62E5E978/6067F0FC" Ref="R40"  Part="1" 
-AR Path="/62E8A761/6067F0FC" Ref="R?"  Part="1" 
-F 0 "R40" H 1498 6096 50  0000 L CNN
-F 1 "6K8" H 1498 6005 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1470 6040 50  0001 C CNN
-F 3 "~" H 1430 6050 50  0001 C CNN
-	1    1430 6050
-	1    0    0    -1  
-$EndComp
-Connection ~ 1430 6200
-Wire Wire Line
-	2060 5850 1430 5850
 Wire Wire Line
 	2060 6190 2590 6190
-Wire Wire Line
-	1430 6500 1430 6560
-Wire Wire Line
-	2060 5850 2060 6190
-Wire Wire Line
-	1430 5900 1430 5850
 Text Label 3690 6640 0    50   ~ 0
 BUSA.2
-Wire Wire Line
-	1430 6560 3680 6560
 Wire Wire Line
 	3680 6190 3680 6560
 Wire Wire Line
@@ -1200,12 +1161,8 @@ Text Label 7700 5580 0    50   ~ 0
 K18+
 Text Label 7700 5670 0    50   ~ 0
 K18-
-Text HLabel 5260 6180 0    50   Input ~ 0
-Phantom_48V
 Wire Wire Line
 	7630 6170 7670 6170
-Wire Wire Line
-	5260 6180 5420 6180
 Wire Wire Line
 	6580 6270 6390 6270
 Wire Wire Line
@@ -1216,47 +1173,10 @@ Entry Wire Line
 	8040 6170 7940 6270
 Wire Wire Line
 	6390 6620 7940 6620
-$Comp
-L Device:R_US R43
-U 1 1 60721959
-P 5420 6330
-AR Path="/62E5E978/60721959" Ref="R43"  Part="1" 
-AR Path="/62E8A761/60721959" Ref="R?"  Part="1" 
-F 0 "R43" H 5488 6376 50  0000 L CNN
-F 1 "6K8" H 5488 6285 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5460 6320 50  0001 C CNN
-F 3 "~" H 5420 6330 50  0001 C CNN
-	1    5420 6330
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R42
-U 1 1 60721963
-P 5420 6030
-AR Path="/62E5E978/60721963" Ref="R42"  Part="1" 
-AR Path="/62E8A761/60721963" Ref="R?"  Part="1" 
-F 0 "R42" H 5488 6076 50  0000 L CNN
-F 1 "6K8" H 5488 5985 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5460 6020 50  0001 C CNN
-F 3 "~" H 5420 6030 50  0001 C CNN
-	1    5420 6030
-	1    0    0    -1  
-$EndComp
-Connection ~ 5420 6180
-Wire Wire Line
-	6050 5830 5420 5830
 Wire Wire Line
 	6050 6170 6580 6170
-Wire Wire Line
-	5420 6480 5420 6540
-Wire Wire Line
-	6050 5830 6050 6170
-Wire Wire Line
-	5420 5880 5420 5830
 Text Label 7680 6620 0    50   ~ 0
 BUSB.2
-Wire Wire Line
-	5420 6540 7670 6540
 Wire Wire Line
 	7670 6170 7670 6540
 Wire Wire Line
@@ -1321,13 +1241,13 @@ BUSB.2
 Text Label 7680 8670 0    50   ~ 0
 BUSB.1
 $Comp
-L power:GND #PWR0121
+L power:GND2 #PWR0121
 U 1 1 609411A2
 P 7410 7370
 AR Path="/62E5E978/609411A2" Ref="#PWR0121"  Part="1" 
 AR Path="/62E8A761/609411A2" Ref="#PWR?"  Part="1" 
 F 0 "#PWR0121" H 7410 7120 50  0001 C CNN
-F 1 "GND" H 7415 7197 50  0000 C CNN
+F 1 "GND2" H 7415 7197 50  0000 C CNN
 F 2 "" H 7410 7370 50  0001 C CNN
 F 3 "" H 7410 7370 50  0001 C CNN
 	1    7410 7370
@@ -2002,13 +1922,13 @@ Entry Wire Line
 Entry Wire Line
 	4050 6790 3950 6890
 $Comp
-L power:GND #PWR0122
+L power:GND2 #PWR0122
 U 1 1 6087E8BE
 P 3420 7390
 AR Path="/62E5E978/6087E8BE" Ref="#PWR0122"  Part="1" 
 AR Path="/62E8A761/6087E8BE" Ref="#PWR?"  Part="1" 
 F 0 "#PWR0122" H 3420 7140 50  0001 C CNN
-F 1 "GND" H 3425 7217 50  0000 C CNN
+F 1 "GND2" H 3425 7217 50  0000 C CNN
 F 2 "" H 3420 7390 50  0001 C CNN
 F 3 "" H 3420 7390 50  0001 C CNN
 	1    3420 7390
@@ -2087,6 +2007,20 @@ Text HLabel 3310 7000 0    50   Input ~ 0
 GND
 Wire Wire Line
 	3310 7000 3420 7000
+Text HLabel 2060 6560 0    50   Input ~ 0
+Phantom_48V_COLD_A
+Text HLabel 6050 6170 0    50   Input ~ 0
+Phantom_48V_HOT_B
+Text HLabel 6050 6540 0    50   Input ~ 0
+Phantom_48V_COLD_B
+Wire Wire Line
+	3680 6560 2060 6560
+Wire Wire Line
+	7670 6540 6050 6540
+Text HLabel 7300 6980 0    50   Input ~ 0
+GND
+Wire Wire Line
+	7300 6980 7410 6980
 Wire Bus Line
 	15960 3170 15960 3440
 Wire Bus Line
