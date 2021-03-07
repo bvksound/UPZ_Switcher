@@ -29,6 +29,14 @@ Adafruit_MCP23017 mcp_addr_2;
 
 SoftwareSerial softSerial(10, 11); // RX, TX
 
+//Variables for the blinking
+bool ledblinkstate_BUSA = false;
+bool ledblinkstate_BUSB = false;
+bool ledblinkstart_BUSA = false;
+bool ledblinkstart_BUSB = false;
+int blinkspeed_BUSA = 500;
+int blinkspeed_BUSB = 500;
+
 // MCP23017 Address 0
 int INPUT_1_BUSA = 8;  //GPB0
 int INPUT_2_BUSA = 9;  //GPB1
@@ -81,6 +89,8 @@ int CurrentChannel_BUSB = 0;
 
 int addressInputSwitcher = 0;
 int addressOutputSwitcher = 0;
+
+bool CommandResponseGiven = false;
 
 String InputSwitcher_ID = "";
 String OutputSwitcher_ID = "";
@@ -170,14 +180,14 @@ void setup() {
   mcp_addr_2.pinMode(INPUT_8_LED_BUSA, OUTPUT);
   mcp_addr_2.pinMode(INPUT_8_LED_BUSB, OUTPUT);
   
-//  mcp_addr_1.pinMode(9, OUTPUT);
-//  mcp_addr_1.pinMode(8, OUTPUT);
-  ReadAddress_DIP_Switch();
+  ReadAddress_DIP_Switch(); //Read out dip switches for the addressing and set all corrent ID strings.
 }
 
 void loop() {
     ReceiveNewData(); //Look for any incoming RS232 packets. When terminated with <CR> '/n' execute ParseData
     ParseData(); //Whenever data has been received with correct termination, execute right actions.
+    CheckBlink_BUSA();
+    CheckBlink_BUSB();
 }
 
 void ReceiveNewData() {
@@ -199,96 +209,172 @@ void ReceiveNewData() {
             receivedCharsString = String(receivedChars);
             ndx = 0;
             newData = true;
+            CommandResponseGiven = false;
         }
     }
 }
 
 void ParseData() {
     if (newData == true) {
+        Serial.println(receivedCharsString);
          if(receivedCharsString == InputSwitcher_ID){
-            softSerial.println("Rohde & Schwarz, UPZ, 1.01, 0\n");
+            softSerial.println("Rohde & Schwarz, UPZ, 1.01, 0\n"); //Use Firmware rev 1 to indicate input switcher
+            CommandResponseGiven = true;
          }
          if(receivedCharsString == OutputSwitcher_ID){
-            softSerial.println("Rohde & Schwarz, UPZ, 2.01, 0\n");
+            softSerial.println("Rohde & Schwarz, UPZ, 2.01, 0\n"); //Use Firmware rev 2 to indicate output switcher
+            CommandResponseGiven = true;
          }
          
          if (receivedCharsString == "*RST"){
+           //Reset everything including Input and Output switchers.
            ResetChannels_BUSA();
-           ResetChannels_BUSB();    
+           ResetChannels_BUSB();
+           SetPhantom('A', LOW);
+           SetPhantom('B', LOW);
+           ledblinkstart_BUSA = LOW;
+           ledblinkstart_BUSB = LOW;
+           CommandResponseGiven = true;    
          }
-
+         //Input Switcher Bus A
          if (receivedCharsString == "IA0"){
            ResetChannels_BUSA();
+           CurrentChannel_BUSA = 0;
+           CommandResponseGiven = true;
          }
          if (receivedCharsString == Input1_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(1,HIGH); 
+           SetSingleChannel_BUSA(1,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input2_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(2,HIGH); 
+           SetSingleChannel_BUSA(2,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input3_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(3,HIGH); 
+           SetSingleChannel_BUSA(3,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input4_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(4,HIGH); 
+           SetSingleChannel_BUSA(4,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input5_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(5,HIGH); 
+           SetSingleChannel_BUSA(5,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input6_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(6,HIGH); 
+           SetSingleChannel_BUSA(6,HIGH);
+           CommandResponseGiven = true; 
          } 
          if (receivedCharsString == Input7_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(7,HIGH); 
+           SetSingleChannel_BUSA(7,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input8_A_ID){
            SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
-           SetSingleChannel_BUSA(8,HIGH); 
+           SetSingleChannel_BUSA(8,HIGH);
+           CommandResponseGiven = true; 
          }
-
+        //Input Switcher Bus B
          if (receivedCharsString == "IB0"){
            ResetChannels_BUSB();
+           CurrentChannel_BUSA = 0;
+           CommandResponseGiven = true;  
          }
          if (receivedCharsString == Input1_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(1,HIGH); 
+           SetSingleChannel_BUSB(1,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input2_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(2,HIGH); 
+           SetSingleChannel_BUSB(2,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input3_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(3,HIGH); 
+           SetSingleChannel_BUSB(3,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input4_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(4,HIGH); 
+           SetSingleChannel_BUSB(4,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input5_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(5,HIGH); 
+           SetSingleChannel_BUSB(5,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input6_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(6,HIGH); 
+           SetSingleChannel_BUSB(6,HIGH);
+           CommandResponseGiven = true; 
          } 
          if (receivedCharsString == Input7_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(7,HIGH); 
+           SetSingleChannel_BUSB(7,HIGH);
+           CommandResponseGiven = true; 
          }
          if (receivedCharsString == Input8_B_ID){
            SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
-           SetSingleChannel_BUSB(8,HIGH); 
+           SetSingleChannel_BUSB(8,HIGH);
+           CommandResponseGiven = true; 
          }
          
+         //Output Switcher BUS A
+         if (receivedCharsString == "OA-1"){
+           //Ignore this command as this would close all output channels, 
+           //Since we're working with Phantom power this is not recommended.
+           //To be evaluated if behavior is desired.
+           CommandResponseGiven = true;
+         }
+         if (receivedCharsString == "OA0"){
+           //Reset all output channels, in our case only 2 relays are used to switch on Phantom Power.
+           SetPhantom('A',LOW);
+           ledblinkstart_BUSA = LOW;
+           CommandResponseGiven = true;
+         }
+         if (receivedCharsString == Output1_A_ID || receivedCharsString == Output2_A_ID || receivedCharsString == Output3_A_ID || receivedCharsString == Output4_A_ID || receivedCharsString == Output5_A_ID || receivedCharsString == Output6_A_ID || receivedCharsString == Output7_A_ID || receivedCharsString == Output8_A_ID){
+           //Different behavior of an output switch, here any A channel will trigger the phantom Power.
+           //This might be usefull if tracking or existing functionality of the UPL is to be used.
+           //To be evaluted if behavior is desired for Phantom power application
+           SetPhantom('A',HIGH);
+           ledblinkstart_BUSA = HIGH;
+           CommandResponseGiven = true;
+         }
+         //Output Switcher BUS B
+         if (receivedCharsString == "OB-1"){
+           //Ignore this command as this would close all output channels, 
+           //Since we're working with Phantom power this is not recommended.
+           //To be evaluated if behavior is desired.
+           CommandResponseGiven = true;
+         }
+         if (receivedCharsString == "OB0"){
+           //Reset all output channels, in our case only 2 relays are used to switch on Phantom Power.
+           SetPhantom('B',LOW);
+           ledblinkstart_BUSB = LOW;
+           CommandResponseGiven = true;
+         }
+         if (receivedCharsString == Output1_B_ID || receivedCharsString == Output2_B_ID || receivedCharsString == Output3_B_ID || receivedCharsString == Output4_B_ID || receivedCharsString == Output5_B_ID || receivedCharsString == Output6_B_ID || receivedCharsString == Output7_B_ID || receivedCharsString == Output8_B_ID){
+           //Different behavior of an output switch, here any B channel will trigger the phantom Power.
+           //This might be usefull if tracking or existing functionality of the UPL is to be used.
+           //To be evaluted if behavior is desired for Phantom power application
+           SetPhantom('B',HIGH);
+           ledblinkstart_BUSB = HIGH;
+           CommandResponseGiven = true;
+         }
+        if (CommandResponseGiven == false){
+          OtherCommandResponse(receivedCharsString);
+          CommandResponseGiven = true;
+        }
         newData = false;
     }
 }
@@ -302,8 +388,6 @@ void ResetChannels_BUSA() {
   mcp_addr_0.digitalWrite(INPUT_6_BUSA, LOW);
   mcp_addr_0.digitalWrite(INPUT_7_BUSA, LOW);
   mcp_addr_0.digitalWrite(INPUT_8_BUSA, LOW);
-
-  mcp_addr_1.digitalWrite(PHANTOM_PWR_BUSA, LOW);
 
   mcp_addr_1.digitalWrite(OUTPUT_A_LED_Green, LOW);
   mcp_addr_1.digitalWrite(OUTPUT_A_LED_Red, LOW);
@@ -329,8 +413,6 @@ void ResetChannels_BUSB() {
   mcp_addr_0.digitalWrite(INPUT_6_BUSB, LOW);
   mcp_addr_0.digitalWrite(INPUT_7_BUSB, LOW);
   mcp_addr_0.digitalWrite(INPUT_8_BUSB, LOW);
-
-  mcp_addr_1.digitalWrite(PHANTOM_PWR_BUSB, LOW);
 
   mcp_addr_1.digitalWrite(OUTPUT_B_LED_Yellow, LOW);
   mcp_addr_1.digitalWrite(OUTPUT_B_LED_Red, LOW);
@@ -438,6 +520,19 @@ void SetSingleChannel_BUSB(int Channel, bool State) {
   }
 }
 
+void SetPhantom(char Bus, bool State) {
+  switch (Bus) {
+    case 'A':
+      mcp_addr_1.digitalWrite(PHANTOM_PWR_BUSA, State);
+      mcp_addr_2.digitalWrite(OUTPUT_A_LED_Red, State);
+      break;
+    case 'B':
+      mcp_addr_0.digitalWrite(PHANTOM_PWR_BUSB, State);
+      mcp_addr_2.digitalWrite(OUTPUT_B_LED_Red, State);
+      break;
+  }
+}
+
 void ReadAddress_DIP_Switch() {
     addressInputSwitcher = 0;
     addressOutputSwitcher = 1;
@@ -478,4 +573,307 @@ void ReadAddress_DIP_Switch() {
     Output7_B_ID = "OB"+ String(8*addressOutputSwitcher+7);
     Output8_A_ID = "OA"+ String(8*addressOutputSwitcher+8);
     Output8_B_ID = "OB"+ String(8*addressOutputSwitcher+8);
+}
+
+void CheckBlink_BUSA(){
+  static unsigned long previousblinktime_BUSA = 0;
+  unsigned long currentblinktime_BUSA = millis();
+  if (currentblinktime_BUSA - previousblinktime_BUSA > blinkspeed_BUSA && ledblinkstart_BUSA == HIGH)
+  {
+    previousblinktime_BUSA = currentblinktime_BUSA;
+    if( ledblinkstate_BUSA == false){
+      ledblinkstate_BUSA = true;
+//      switch (CurrentChannel_BUSA) {
+//      case 1:
+//        mcp_addr_2.digitalWrite(INPUT_1_LED_BUSA, HIGH);
+//        mcp_addr_0.digitalWrite(INPUT_1_BUSA, HIGH); //debugging
+//        break;
+//      case 2:
+//        mcp_addr_2.digitalWrite(INPUT_2_LED_BUSA, HIGH);
+//        mcp_addr_0.digitalWrite(INPUT_2_BUSA, HIGH); //debugging
+//        break;
+//      case 3:
+//        mcp_addr_2.digitalWrite(INPUT_3_LED_BUSA, HIGH);
+//        break;
+//      case 4:
+//        mcp_addr_2.digitalWrite(INPUT_4_LED_BUSA, HIGH);
+//        break;
+//      case 5:
+//        mcp_addr_2.digitalWrite(INPUT_5_LED_BUSA, HIGH);
+//        break;
+//      case 6:
+//        mcp_addr_2.digitalWrite(INPUT_6_LED_BUSA, HIGH);
+//        break;
+//      case 7:
+//        mcp_addr_2.digitalWrite(INPUT_7_LED_BUSA, HIGH);
+//        break;
+//      case 8: 
+//        mcp_addr_2.digitalWrite(INPUT_8_LED_BUSA, HIGH);
+//        break;
+//      default:
+//        break;
+//    }
+      SetSingleChannel('A', 'I',CurrentChannel_BUSA,'L', HIGH);
+   }
+    else{
+      ledblinkstate_BUSA = false;
+//      switch (CurrentChannel_BUSA) {
+//      case 1:
+//        mcp_addr_2.digitalWrite(INPUT_1_LED_BUSA, LOW);
+//        mcp_addr_0.digitalWrite(INPUT_1_BUSA, LOW); //debugging
+//        break;
+//      case 2:
+//        mcp_addr_2.digitalWrite(INPUT_2_LED_BUSA, LOW);
+//        mcp_addr_0.digitalWrite(INPUT_2_BUSA, LOW); //debugging
+//        break;
+//      case 3:
+//        mcp_addr_2.digitalWrite(INPUT_3_LED_BUSA, LOW);
+//        break;
+//      case 4:
+//        mcp_addr_2.digitalWrite(INPUT_4_LED_BUSA, LOW);
+//        break;
+//      case 5:
+//        mcp_addr_2.digitalWrite(INPUT_5_LED_BUSA, LOW);
+//        break;
+//      case 6:
+//        mcp_addr_2.digitalWrite(INPUT_6_LED_BUSA, LOW);
+//        break;
+//      case 7:
+//        mcp_addr_2.digitalWrite(INPUT_7_LED_BUSA, LOW);
+//        break;
+//      case 8: 
+//        mcp_addr_2.digitalWrite(INPUT_8_LED_BUSA, LOW);
+//        break;
+//      default:
+//        break;
+//    }
+    SetSingleChannel('A', 'I',CurrentChannel_BUSA,'L', LOW);
+  }
+}
+  if(ledblinkstart_BUSA == LOW && CurrentChannel_BUSA != 0){
+    SetSingleChannel('A', 'I',CurrentChannel_BUSA,'L', HIGH);
+//    switch (CurrentChannel_BUSA) {
+//      case 1:
+//        mcp_addr_2.digitalWrite(INPUT_1_LED_BUSA, HIGH);
+//        mcp_addr_0.digitalWrite(INPUT_1_BUSA, HIGH); //debugging
+//        break;
+//      case 2:
+//        mcp_addr_2.digitalWrite(INPUT_2_LED_BUSA, HIGH);
+//        mcp_addr_0.digitalWrite(INPUT_2_BUSA, HIGH); //debugging
+//        break;
+//      case 3:
+//        mcp_addr_2.digitalWrite(INPUT_3_LED_BUSA, HIGH);
+//        break;
+//      case 4:
+//        mcp_addr_2.digitalWrite(INPUT_4_LED_BUSA, HIGH);
+//        break;
+//      case 5:
+//        mcp_addr_2.digitalWrite(INPUT_5_LED_BUSA, HIGH);
+//        break;
+//      case 6:
+//        mcp_addr_2.digitalWrite(INPUT_6_LED_BUSA, HIGH);
+//        break;
+//      case 7:
+//        mcp_addr_2.digitalWrite(INPUT_7_LED_BUSA, HIGH);
+//        break;
+//      case 8: 
+//        mcp_addr_2.digitalWrite(INPUT_8_LED_BUSA, HIGH);
+//        break;
+//      default:
+//        break;
+//    }
+  }
+}
+
+void CheckBlink_BUSB(){
+  static unsigned long previousblinktime_BUSB = 0;
+  unsigned long currentblinktime_BUSB = millis();
+  if (currentblinktime_BUSB - previousblinktime_BUSB > blinkspeed_BUSB  && ledblinkstart_BUSB == HIGH)
+  {
+    previousblinktime_BUSB = currentblinktime_BUSB;
+    if( ledblinkstate_BUSB == false){
+      ledblinkstate_BUSB = true;
+      switch (CurrentChannel_BUSB) {
+      case 1:
+        mcp_addr_2.digitalWrite(INPUT_1_LED_BUSB, HIGH);
+        break;
+      case 2:
+        mcp_addr_2.digitalWrite(INPUT_2_LED_BUSB, HIGH);
+        break;
+      case 3:
+        mcp_addr_2.digitalWrite(INPUT_3_LED_BUSB, HIGH);
+        break;
+      case 4:
+        mcp_addr_2.digitalWrite(INPUT_4_LED_BUSB, HIGH);
+        break;
+      case 5:
+        mcp_addr_2.digitalWrite(INPUT_5_LED_BUSB, HIGH);
+        break;
+      case 6:
+        mcp_addr_2.digitalWrite(INPUT_6_LED_BUSB, HIGH);
+        break;
+      case 7:
+        mcp_addr_2.digitalWrite(INPUT_7_LED_BUSB, HIGH);
+        break;
+      case 8: 
+        mcp_addr_2.digitalWrite(INPUT_8_LED_BUSB, HIGH);
+        break;
+      default:
+        break;
+    }
+    }
+    else{
+      ledblinkstate_BUSB = false;
+      switch (CurrentChannel_BUSB) {
+      case 1:
+        mcp_addr_2.digitalWrite(INPUT_1_LED_BUSB, LOW);
+        break;
+      case 2:
+        mcp_addr_2.digitalWrite(INPUT_2_LED_BUSB, LOW);
+        break;
+      case 3:
+        mcp_addr_2.digitalWrite(INPUT_3_LED_BUSB, LOW);
+        break;
+      case 4:
+        mcp_addr_2.digitalWrite(INPUT_4_LED_BUSB, LOW);
+        break;
+      case 5:
+        mcp_addr_2.digitalWrite(INPUT_5_LED_BUSB, LOW);
+        break;
+      case 6:
+        mcp_addr_2.digitalWrite(INPUT_6_LED_BUSB, LOW);
+        break;
+      case 7:
+        mcp_addr_2.digitalWrite(INPUT_7_LED_BUSB, LOW);
+        break;
+      case 8: 
+        mcp_addr_2.digitalWrite(INPUT_8_LED_BUSB, LOW);
+        break;
+      default:
+        break;
+    }
+  }
+  }
+}
+
+void OtherCommandResponse(String Command){
+  Serial.println(Command);
+  Serial.println(Command.substring(0,1));
+  Serial.println(Command.substring(1,2));
+  if(Command.substring(0,1) == "I"){
+    if(Command.substring(1,2) == "A"){
+      //Assumption that non supported channel number has been requested
+      //Besides the popup error of the UPL, switch off the current BUS A channel
+      SetSingleChannel_BUSA(CurrentChannel_BUSA,LOW);
+      CurrentChannel_BUSA = 0;
+    }
+    if(Command.substring(1,2) == "B"){
+      //Assumption that non supported channel number has been requested
+      //Besides the popup error of the UPL, switch off the current BUS A channel
+      SetSingleChannel_BUSB(CurrentChannel_BUSB,LOW);
+      CurrentChannel_BUSB = 0;
+    }
+  }
+  if(Command.substring(0,1) == "O"){
+      if(Command.substring(1,2) == "A"){
+        //Assumption that non supported channel number has been requested
+        //Besides the popup error of the UPL, switch off the current BUS A channel
+        SetPhantom('A',LOW);
+        ledblinkstart_BUSA = LOW;
+        Serial.println("test has run here");
+      }
+      if(Command.substring(1,2) == "B"){
+        //Assumption that non supported channel number has been requested
+        //Besides the popup error of the UPL, switch off the current BUS A channel
+        SetPhantom('B',LOW);
+        ledblinkstart_BUSB = LOW;
+      }
+    }
+}
+
+void SetSingleChannel(char Bus, char Type, int Channel, char Action, bool State){
+  //Combined function block to set a channel 
+  //Bus A or B
+  //Type I or O (Input or Output
+  //Channel 1-128, Action R or L (Relay or Led)
+    switch (Action){
+      case 'R':   
+        break;
+      case 'L':
+          switch (Channel) {
+            case 1:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_1_LED_BUSA, State);
+                mcp_addr_0.digitalWrite(INPUT_1_BUSA, State); //debugging
+                Serial.println("function passed here");
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_1_LED_BUSB, State);
+              }
+              break;
+            case 2:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_2_LED_BUSA, State);
+                mcp_addr_0.digitalWrite(INPUT_2_BUSA, State); //debugging
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_2_LED_BUSB, State);
+              }
+              break;
+            case 3:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_3_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_3_LED_BUSB, State);
+              }
+              break;
+            case 4:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_4_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_4_LED_BUSB, State);
+              }
+              break;
+            case 5:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_5_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_5_LED_BUSB, State);
+              }
+              break;
+            case 6:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_6_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_6_LED_BUSB, State);
+              }
+              break;
+            case 7:
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_7_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_7_LED_BUSB, State);
+              }
+              break;
+            case 8: 
+              if (Bus == 'A'){
+                mcp_addr_2.digitalWrite(INPUT_8_LED_BUSA, State);
+              }
+              if (Bus == 'B'){
+                mcp_addr_2.digitalWrite(INPUT_8_LED_BUSB, State);
+              }
+              break;
+            default:
+              break;
+          }
+        break;
+      default:
+        break;
+    }
+  
 }
