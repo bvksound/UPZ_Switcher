@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 5 6
+Sheet 3 3
 Title "Relay Board"
 Date "2021-02-27"
 Rev "1"
@@ -43,18 +43,6 @@ Wire Wire Line
 	640  2540 600  2540
 Wire Wire Line
 	550  2440 550  3010
-Text Label 1740 1920 0    50   ~ 0
-K1-
-Text Label 1740 1840 0    50   ~ 0
-K1+
-Wire Wire Line
-	1690 2240 1690 1920
-Wire Wire Line
-	640  2240 640  1840
-Entry Wire Line
-	2240 1820 2140 1920
-Entry Wire Line
-	2240 1740 2140 1840
 Text Label 1750 1580 0    50   ~ 0
 IN1.2
 Text Label 1750 1500 0    50   ~ 0
@@ -75,6 +63,7 @@ U 1 1 603961B2
 P 770 1140
 AR Path="/62E5E978/603961B2" Ref="Input_1"  Part="1" 
 AR Path="/62E8A761/603961B2" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603961B2" Ref="Input_1"  Part="1" 
 F 0 "Input_1" H 1170 1405 50  0000 C CNN
 F 1 "NC3FDH" H 1170 1314 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 1420 1240 50  0001 L CNN
@@ -92,6 +81,7 @@ U 1 1 6039D4F1
 P -510 2240
 AR Path="/62E5E978/6039D4F1" Ref="K1"  Part="1" 
 AR Path="/62E8A761/6039D4F1" Ref="K?"  Part="1" 
+AR Path="/605B7DEF/6039D4F1" Ref="K1"  Part="1" 
 F 0 "K1" H 1165 2505 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 1165 2414 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 1540 2340 50  0001 L CNN
@@ -136,10 +126,6 @@ Wire Wire Line
 	550  3010 2000 3010
 Wire Wire Line
 	640  2440 550  2440
-Wire Wire Line
-	640  1840 2140 1840
-Wire Wire Line
-	1690 1920 2140 1920
 Text Notes 2950 710  0    118  ~ 24
 Input 2
 Wire Wire Line
@@ -170,18 +156,6 @@ Wire Wire Line
 	2590 2540 2550 2540
 Wire Wire Line
 	2500 2440 2500 3010
-Text Label 3690 1920 0    50   ~ 0
-K2-
-Text Label 3690 1840 0    50   ~ 0
-K2+
-Wire Wire Line
-	3640 2240 3640 1920
-Wire Wire Line
-	2590 2240 2590 1840
-Entry Wire Line
-	4190 1820 4090 1920
-Entry Wire Line
-	4190 1740 4090 1840
 Text Label 3700 1580 0    50   ~ 0
 IN2.2
 Text Label 3700 1500 0    50   ~ 0
@@ -202,6 +176,7 @@ U 1 1 603ED32E
 P 2720 1140
 AR Path="/62E5E978/603ED32E" Ref="Input_2"  Part="1" 
 AR Path="/62E8A761/603ED32E" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603ED32E" Ref="Input_2"  Part="1" 
 F 0 "Input_2" H 3120 1405 50  0000 C CNN
 F 1 "NC3FDH" H 3120 1314 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 3370 1240 50  0001 L CNN
@@ -219,7 +194,8 @@ U 1 1 603ED33F
 P 1440 2240
 AR Path="/62E5E978/603ED33F" Ref="K2"  Part="1" 
 AR Path="/62E8A761/603ED33F" Ref="K?"  Part="1" 
-F 0 "K2" H 3115 2505 50  0000 C CNN
+AR Path="/605B7DEF/603ED33F" Ref="K3"  Part="1" 
+F 0 "K3" H 3115 2505 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 3115 2414 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 3490 2340 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 3490 2240 50  0001 L CNN
@@ -263,10 +239,6 @@ Wire Wire Line
 	2500 3010 3950 3010
 Wire Wire Line
 	2590 2440 2500 2440
-Wire Wire Line
-	2590 1840 4090 1840
-Wire Wire Line
-	3640 1920 4090 1920
 Text Notes 4910 740  0    118  ~ 24
 Input 3
 Wire Wire Line
@@ -297,18 +269,6 @@ Wire Wire Line
 	4580 2550 4540 2550
 Wire Wire Line
 	4490 2450 4490 3020
-Text Label 5680 1930 0    50   ~ 0
-K3-
-Text Label 5680 1850 0    50   ~ 0
-K3+
-Wire Wire Line
-	5630 2250 5630 1930
-Wire Wire Line
-	4580 2250 4580 1850
-Entry Wire Line
-	6180 1830 6080 1930
-Entry Wire Line
-	6180 1750 6080 1850
 Text Label 5690 1590 0    50   ~ 0
 IN3.2
 Text Label 5690 1510 0    50   ~ 0
@@ -329,6 +289,7 @@ U 1 1 603F0177
 P 4710 1150
 AR Path="/62E5E978/603F0177" Ref="Input_3"  Part="1" 
 AR Path="/62E8A761/603F0177" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F0177" Ref="Input_3"  Part="1" 
 F 0 "Input_3" H 5110 1415 50  0000 C CNN
 F 1 "NC3FDH" H 5110 1324 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 5360 1250 50  0001 L CNN
@@ -346,7 +307,8 @@ U 1 1 603F0188
 P 3430 2250
 AR Path="/62E5E978/603F0188" Ref="K3"  Part="1" 
 AR Path="/62E8A761/603F0188" Ref="K?"  Part="1" 
-F 0 "K3" H 5105 2515 50  0000 C CNN
+AR Path="/605B7DEF/603F0188" Ref="K6"  Part="1" 
+F 0 "K6" H 5105 2515 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 5105 2424 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 5480 2350 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 5480 2250 50  0001 L CNN
@@ -390,10 +352,6 @@ Wire Wire Line
 	4490 3020 5940 3020
 Wire Wire Line
 	4580 2450 4490 2450
-Wire Wire Line
-	4580 1850 6080 1850
-Wire Wire Line
-	5630 1930 6080 1930
 Text Notes 6890 740  0    118  ~ 24
 Input 4
 Wire Wire Line
@@ -424,18 +382,6 @@ Wire Wire Line
 	6580 2560 6540 2560
 Wire Wire Line
 	6490 2460 6490 3030
-Text Label 7680 1940 0    50   ~ 0
-K4-
-Text Label 7680 1860 0    50   ~ 0
-K4+
-Wire Wire Line
-	7630 2260 7630 1940
-Wire Wire Line
-	6580 2260 6580 1860
-Entry Wire Line
-	8180 1840 8080 1940
-Entry Wire Line
-	8180 1760 8080 1860
 Text Label 7690 1600 0    50   ~ 0
 IN4.2
 Text Label 7690 1520 0    50   ~ 0
@@ -456,6 +402,7 @@ U 1 1 603F01C3
 P 6710 1160
 AR Path="/62E5E978/603F01C3" Ref="Input_4"  Part="1" 
 AR Path="/62E8A761/603F01C3" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F01C3" Ref="Input_4"  Part="1" 
 F 0 "Input_4" H 7110 1425 50  0000 C CNN
 F 1 "NC3FDH" H 7110 1334 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 7360 1260 50  0001 L CNN
@@ -473,7 +420,8 @@ U 1 1 603F01D4
 P 5430 2260
 AR Path="/62E5E978/603F01D4" Ref="K4"  Part="1" 
 AR Path="/62E8A761/603F01D4" Ref="K?"  Part="1" 
-F 0 "K4" H 7105 2525 50  0000 C CNN
+AR Path="/605B7DEF/603F01D4" Ref="K8"  Part="1" 
+F 0 "K8" H 7105 2525 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 7105 2434 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 7480 2360 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 7480 2260 50  0001 L CNN
@@ -517,10 +465,6 @@ Wire Wire Line
 	6490 3030 7940 3030
 Wire Wire Line
 	6580 2460 6490 2460
-Wire Wire Line
-	6580 1860 8080 1860
-Wire Wire Line
-	7630 1940 8080 1940
 Text Notes 8850 740  0    118  ~ 24
 Input 5
 Wire Wire Line
@@ -551,18 +495,6 @@ Wire Wire Line
 	8540 2560 8500 2560
 Wire Wire Line
 	8450 2460 8450 3030
-Text Label 9640 1940 0    50   ~ 0
-K5-
-Text Label 9640 1860 0    50   ~ 0
-K5+
-Wire Wire Line
-	9590 2260 9590 1940
-Wire Wire Line
-	8540 2260 8540 1860
-Entry Wire Line
-	10140 1840 10040 1940
-Entry Wire Line
-	10140 1760 10040 1860
 Text Label 9650 1600 0    50   ~ 0
 IN5.2
 Text Label 9650 1520 0    50   ~ 0
@@ -583,6 +515,7 @@ U 1 1 603F69B3
 P 8670 1160
 AR Path="/62E5E978/603F69B3" Ref="Input_5"  Part="1" 
 AR Path="/62E8A761/603F69B3" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F69B3" Ref="Input_5"  Part="1" 
 F 0 "Input_5" H 9070 1425 50  0000 C CNN
 F 1 "NC3FDH" H 9070 1334 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 9320 1260 50  0001 L CNN
@@ -600,7 +533,8 @@ U 1 1 603F69C4
 P 7390 2260
 AR Path="/62E5E978/603F69C4" Ref="K5"  Part="1" 
 AR Path="/62E8A761/603F69C4" Ref="K?"  Part="1" 
-F 0 "K5" H 9065 2525 50  0000 C CNN
+AR Path="/605B7DEF/603F69C4" Ref="K11"  Part="1" 
+F 0 "K11" H 9065 2525 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 9065 2434 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 9440 2360 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 9440 2260 50  0001 L CNN
@@ -644,10 +578,6 @@ Wire Wire Line
 	8450 3030 9900 3030
 Wire Wire Line
 	8540 2460 8450 2460
-Wire Wire Line
-	8540 1860 10040 1860
-Wire Wire Line
-	9590 1940 10040 1940
 Text Notes 10820 750  0    118  ~ 24
 Input 6
 Wire Wire Line
@@ -678,18 +608,6 @@ Wire Wire Line
 	10520 2590 10480 2590
 Wire Wire Line
 	10430 2490 10430 3060
-Text Label 11620 1970 0    50   ~ 0
-K6-
-Text Label 11620 1890 0    50   ~ 0
-K6+
-Wire Wire Line
-	11570 2290 11570 1970
-Wire Wire Line
-	10520 2290 10520 1890
-Entry Wire Line
-	12120 1870 12020 1970
-Entry Wire Line
-	12120 1790 12020 1890
 Text Label 11630 1630 0    50   ~ 0
 IN6.2
 Text Label 11630 1550 0    50   ~ 0
@@ -710,6 +628,7 @@ U 1 1 603F69FF
 P 10650 1190
 AR Path="/62E5E978/603F69FF" Ref="Input_6"  Part="1" 
 AR Path="/62E8A761/603F69FF" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F69FF" Ref="Input_6"  Part="1" 
 F 0 "Input_6" H 11050 1455 50  0000 C CNN
 F 1 "NC3FDH" H 11050 1364 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 11300 1290 50  0001 L CNN
@@ -727,7 +646,8 @@ U 1 1 603F6A10
 P 9370 2290
 AR Path="/62E5E978/603F6A10" Ref="K6"  Part="1" 
 AR Path="/62E8A761/603F6A10" Ref="K?"  Part="1" 
-F 0 "K6" H 11045 2555 50  0000 C CNN
+AR Path="/605B7DEF/603F6A10" Ref="K13"  Part="1" 
+F 0 "K13" H 11045 2555 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 11045 2464 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 11420 2390 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 11420 2290 50  0001 L CNN
@@ -771,10 +691,6 @@ Wire Wire Line
 	10430 3060 11880 3060
 Wire Wire Line
 	10520 2490 10430 2490
-Wire Wire Line
-	10520 1890 12020 1890
-Wire Wire Line
-	11570 1970 12020 1970
 Text Notes 12790 760  0    118  ~ 24
 Input 7
 Wire Wire Line
@@ -805,18 +721,6 @@ Wire Wire Line
 	12480 2560 12440 2560
 Wire Wire Line
 	12390 2460 12390 3030
-Text Label 13580 1940 0    50   ~ 0
-K7-
-Text Label 13580 1860 0    50   ~ 0
-K7+
-Wire Wire Line
-	13530 2260 13530 1940
-Wire Wire Line
-	12480 2260 12480 1860
-Entry Wire Line
-	14080 1840 13980 1940
-Entry Wire Line
-	14080 1760 13980 1860
 Text Label 13590 1600 0    50   ~ 0
 IN7.2
 Text Label 13590 1520 0    50   ~ 0
@@ -837,6 +741,7 @@ U 1 1 603F6A4B
 P 12610 1160
 AR Path="/62E5E978/603F6A4B" Ref="Input_7"  Part="1" 
 AR Path="/62E8A761/603F6A4B" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F6A4B" Ref="Input_7"  Part="1" 
 F 0 "Input_7" H 13010 1425 50  0000 C CNN
 F 1 "NC3FDH" H 13010 1334 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 13260 1260 50  0001 L CNN
@@ -854,7 +759,8 @@ U 1 1 603F6A5C
 P 11330 2260
 AR Path="/62E5E978/603F6A5C" Ref="K7"  Part="1" 
 AR Path="/62E8A761/603F6A5C" Ref="K?"  Part="1" 
-F 0 "K7" H 13005 2525 50  0000 C CNN
+AR Path="/605B7DEF/603F6A5C" Ref="K15"  Part="1" 
+F 0 "K15" H 13005 2525 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 13005 2434 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 13380 2360 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 13380 2260 50  0001 L CNN
@@ -898,10 +804,6 @@ Wire Wire Line
 	12390 3030 13840 3030
 Wire Wire Line
 	12480 2460 12390 2460
-Wire Wire Line
-	12480 1860 13980 1860
-Wire Wire Line
-	13530 1940 13980 1940
 Text Notes 14760 750  0    118  ~ 24
 Input 8
 Wire Wire Line
@@ -932,18 +834,6 @@ Wire Wire Line
 	14360 2560 14320 2560
 Wire Wire Line
 	14270 2460 14270 3030
-Text Label 15460 1940 0    50   ~ 0
-K8-
-Text Label 15460 1860 0    50   ~ 0
-K8+
-Wire Wire Line
-	15410 2260 15410 1940
-Wire Wire Line
-	14360 2260 14360 1860
-Entry Wire Line
-	15960 1840 15860 1940
-Entry Wire Line
-	15960 1760 15860 1860
 Text Label 15470 1600 0    50   ~ 0
 IN8.2
 Text Label 15470 1520 0    50   ~ 0
@@ -964,6 +854,7 @@ U 1 1 603F6A97
 P 14490 1160
 AR Path="/62E5E978/603F6A97" Ref="Input_8"  Part="1" 
 AR Path="/62E8A761/603F6A97" Ref="Input_?"  Part="1" 
+AR Path="/605B7DEF/603F6A97" Ref="Input_8"  Part="1" 
 F 0 "Input_8" H 14890 1425 50  0000 C CNN
 F 1 "NC3FDH" H 14890 1334 50  0000 C CNN
 F 2 "BVKSound:NC3FDH" H 15140 1260 50  0001 L CNN
@@ -981,7 +872,8 @@ U 1 1 603F6AA8
 P 13210 2260
 AR Path="/62E5E978/603F6AA8" Ref="K8"  Part="1" 
 AR Path="/62E8A761/603F6AA8" Ref="K?"  Part="1" 
-F 0 "K8" H 14885 2525 50  0000 C CNN
+AR Path="/605B7DEF/603F6AA8" Ref="K17"  Part="1" 
+F 0 "K17" H 14885 2525 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 14885 2434 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 15260 2360 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 15260 2260 50  0001 L CNN
@@ -1025,22 +917,6 @@ Wire Wire Line
 	14270 3030 15720 3030
 Wire Wire Line
 	14360 2460 14270 2460
-Wire Wire Line
-	14360 1860 15860 1860
-Wire Wire Line
-	15410 1940 15860 1940
-Connection ~ 8180 3170
-Wire Bus Line
-	8180 3170 10140 3170
-Connection ~ 10140 3170
-Wire Bus Line
-	10140 3170 12120 3170
-Connection ~ 12120 3170
-Wire Bus Line
-	12120 3170 14080 3170
-Connection ~ 14080 3170
-Wire Bus Line
-	14080 3170 15960 3170
 Wire Bus Line
 	15820 3300 13940 3300
 Wire Bus Line
@@ -1059,7 +935,8 @@ U 1 1 6053E7C3
 P 1440 5990
 AR Path="/62E5E978/6053E7C3" Ref="K17"  Part="1" 
 AR Path="/62E8A761/6053E7C3" Ref="K?"  Part="1" 
-F 0 "K17" H 3115 6255 50  0000 C CNN
+AR Path="/605B7DEF/6053E7C3" Ref="K5"  Part="1" 
+F 0 "K5" H 3115 6255 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 3115 6164 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 3490 6090 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 3490 5990 50  0001 L CNN
@@ -1073,30 +950,6 @@ F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 3490 5190 50  00
 	1    1440 5990
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	4190 3170 6180 3170
-Connection ~ 4190 3170
-Wire Bus Line
-	6180 3170 8180 3170
-Connection ~ 6180 3170
-Wire Wire Line
-	2590 5990 2490 5990
-Wire Wire Line
-	2490 5990 2490 5600
-Wire Wire Line
-	3640 5990 3640 5690
-Entry Wire Line
-	4190 5500 4090 5600
-Entry Wire Line
-	4190 5590 4090 5690
-Wire Wire Line
-	2490 5600 4090 5600
-Wire Wire Line
-	3640 5690 4090 5690
-Text Label 3710 5600 0    50   ~ 0
-K17+
-Text Label 3710 5690 0    50   ~ 0
-K17-
 Text HLabel 2060 6190 0    50   Input ~ 0
 Phantom_48V_HOT_A
 Wire Wire Line
@@ -1129,7 +982,8 @@ U 1 1 60721922
 P 5430 5970
 AR Path="/62E5E978/60721922" Ref="K18"  Part="1" 
 AR Path="/62E8A761/60721922" Ref="K?"  Part="1" 
-F 0 "K18" H 7105 6235 50  0000 C CNN
+AR Path="/605B7DEF/60721922" Ref="K10"  Part="1" 
+F 0 "K10" H 7105 6235 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 7105 6144 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 7480 6070 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 7480 5970 50  0001 L CNN
@@ -1143,24 +997,6 @@ F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 7480 5170 50  00
 	1    5430 5970
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6580 5970 6480 5970
-Wire Wire Line
-	6480 5970 6480 5580
-Wire Wire Line
-	7630 5970 7630 5670
-Entry Wire Line
-	8180 5480 8080 5580
-Entry Wire Line
-	8180 5570 8080 5670
-Wire Wire Line
-	6480 5580 8080 5580
-Wire Wire Line
-	7630 5670 8080 5670
-Text Label 7700 5580 0    50   ~ 0
-K18+
-Text Label 7700 5670 0    50   ~ 0
-K18-
 Wire Wire Line
 	7630 6170 7670 6170
 Wire Wire Line
@@ -1191,6 +1027,7 @@ U 1 1 60941173
 P 6650 7990
 AR Path="/62E5E978/60941173" Ref="BUS_B1"  Part="1" 
 AR Path="/62E8A761/60941173" Ref="BUS_B?"  Part="1" 
+AR Path="/605B7DEF/60941173" Ref="BUS_B1"  Part="1" 
 F 0 "BUS_B1" H 7100 8255 50  0000 C CNN
 F 1 "NC3MD-H" H 7100 8164 50  0000 C CNN
 F 2 "BVKSound:NC3MDH" H 7400 8090 50  0001 L CNN
@@ -1235,68 +1072,25 @@ Wire Wire Line
 Wire Wire Line
 	6300 8670 7940 8670
 Text Label 7680 8430 0    50   ~ 0
-BUSB.3
+OUTB.3
 Text Label 7680 8550 0    50   ~ 0
-BUSB.2
+OUTB.2
 Text Label 7680 8670 0    50   ~ 0
 BUSB.1
 $Comp
 L power:GND2 #PWR0121
 U 1 1 609411A2
-P 7410 7370
+P 9760 7610
 AR Path="/62E5E978/609411A2" Ref="#PWR0121"  Part="1" 
 AR Path="/62E8A761/609411A2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0121" H 7410 7120 50  0001 C CNN
-F 1 "GND2" H 7415 7197 50  0000 C CNN
-F 2 "" H 7410 7370 50  0001 C CNN
-F 3 "" H 7410 7370 50  0001 C CNN
-	1    7410 7370
+AR Path="/605B7DEF/609411A2" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 9760 7360 50  0001 C CNN
+F 1 "GND2" H 9765 7437 50  0000 C CNN
+F 2 "" H 9760 7610 50  0001 C CNN
+F 3 "" H 9760 7610 50  0001 C CNN
+	1    9760 7610
 	1    0    0    -1  
 $EndComp
-Entry Wire Line
-	8040 6770 7940 6870
-Entry Wire Line
-	8040 6880 7940 6980
-Entry Wire Line
-	8040 6990 7940 7090
-Wire Wire Line
-	7410 6870 7940 6870
-Wire Wire Line
-	7940 6980 7410 6980
-Connection ~ 7410 6980
-Wire Wire Line
-	7410 6980 7410 6870
-Text Label 7670 6870 0    50   ~ 0
-BUSB.1
-Text Label 7680 6980 0    50   ~ 0
-B1.1
-Wire Wire Line
-	7940 7090 7410 7090
-Connection ~ 7410 7090
-Wire Wire Line
-	7410 7090 7410 6980
-Entry Wire Line
-	8040 7100 7940 7200
-Entry Wire Line
-	8040 7210 7940 7310
-Text Label 7680 7090 0    50   ~ 0
-B2.1
-Wire Wire Line
-	7940 7200 7410 7200
-Wire Wire Line
-	7410 7090 7410 7200
-Connection ~ 7410 7200
-Wire Wire Line
-	7410 7200 7410 7310
-Text Label 7680 7200 0    50   ~ 0
-B3.1
-Wire Wire Line
-	7940 7310 7410 7310
-Connection ~ 7410 7310
-Wire Wire Line
-	7410 7310 7410 7370
-Text Label 7680 7310 0    50   ~ 0
-B4.1
 Text Label 7620 7990 0    50   ~ 0
 BUSB.G
 Text Label 7620 8090 0    50   ~ 0
@@ -1305,8 +1099,6 @@ Text Notes 6070 7490 0    118  ~ 24
 BUS B Output
 Entry Wire Line
 	8040 8570 7940 8670
-Wire Bus Line
-	2240 3170 4190 3170
 Wire Bus Line
 	8040 3300 10000 3300
 Connection ~ 8040 3300
@@ -1337,21 +1129,14 @@ Wire Wire Line
 	640  4160 600  4160
 Wire Wire Line
 	550  4060 550  4630
-Text Label 1740 3540 0    50   ~ 0
-K9-
-Text Label 1740 3460 0    50   ~ 0
-K9+
-Wire Wire Line
-	1690 3860 1690 3540
-Wire Wire Line
-	640  3860 640  3460
 $Comp
 L BVKSound:TQ2SA-5V-Z K9
 U 1 1 60C5F179
 P -510 3860
 AR Path="/62E5E978/60C5F179" Ref="K9"  Part="1" 
 AR Path="/62E8A761/60C5F179" Ref="K?"  Part="1" 
-F 0 "K9" H 1165 4125 50  0000 C CNN
+AR Path="/605B7DEF/60C5F179" Ref="K2"  Part="1" 
+F 0 "K2" H 1165 4125 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 1165 4034 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 1540 3960 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 1540 3860 50  0001 L CNN
@@ -1371,16 +1156,7 @@ Wire Wire Line
 	550  4630 2000 4630
 Wire Wire Line
 	640  4060 550  4060
-Wire Wire Line
-	640  3460 2140 3460
-Wire Wire Line
-	1690 3540 2140 3540
 Connection ~ 2100 3300
-Connection ~ 2240 3170
-Entry Wire Line
-	2240 3360 2140 3460
-Entry Wire Line
-	2240 3440 2140 3540
 Wire Bus Line
 	2100 3300 4050 3300
 Wire Wire Line
@@ -1409,21 +1185,14 @@ Wire Wire Line
 	2590 4180 2550 4180
 Wire Wire Line
 	2500 4080 2500 4650
-Text Label 3690 3560 0    50   ~ 0
-K10-
-Text Label 3690 3480 0    50   ~ 0
-K10+
-Wire Wire Line
-	3640 3880 3640 3560
-Wire Wire Line
-	2590 3880 2590 3480
 $Comp
 L BVKSound:TQ2SA-5V-Z K10
 U 1 1 60D4486C
 P 1440 3880
 AR Path="/62E5E978/60D4486C" Ref="K10"  Part="1" 
 AR Path="/62E8A761/60D4486C" Ref="K?"  Part="1" 
-F 0 "K10" H 3115 4145 50  0000 C CNN
+AR Path="/605B7DEF/60D4486C" Ref="K4"  Part="1" 
+F 0 "K4" H 3115 4145 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 3115 4054 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 3490 3980 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 3490 3880 50  0001 L CNN
@@ -1443,14 +1212,6 @@ Wire Wire Line
 	2500 4650 3950 4650
 Wire Wire Line
 	2590 4080 2500 4080
-Wire Wire Line
-	2590 3480 4090 3480
-Wire Wire Line
-	3640 3560 4090 3560
-Entry Wire Line
-	4190 3380 4090 3480
-Entry Wire Line
-	4190 3460 4090 3560
 Wire Wire Line
 	5630 4170 5940 4170
 Wire Wire Line
@@ -1477,21 +1238,14 @@ Wire Wire Line
 	4580 4170 4540 4170
 Wire Wire Line
 	4490 4070 4490 4640
-Text Label 5680 3550 0    50   ~ 0
-K11-
-Text Label 5680 3470 0    50   ~ 0
-K11+
-Wire Wire Line
-	5630 3870 5630 3550
-Wire Wire Line
-	4580 3870 4580 3470
 $Comp
 L BVKSound:TQ2SA-5V-Z K11
 U 1 1 60D5F37D
 P 3430 3870
 AR Path="/62E5E978/60D5F37D" Ref="K11"  Part="1" 
 AR Path="/62E8A761/60D5F37D" Ref="K?"  Part="1" 
-F 0 "K11" H 5105 4135 50  0000 C CNN
+AR Path="/605B7DEF/60D5F37D" Ref="K7"  Part="1" 
+F 0 "K7" H 5105 4135 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 5105 4044 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 5480 3970 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 5480 3870 50  0001 L CNN
@@ -1511,14 +1265,6 @@ Wire Wire Line
 	4490 4640 5940 4640
 Wire Wire Line
 	4580 4070 4490 4070
-Wire Wire Line
-	4580 3470 6080 3470
-Wire Wire Line
-	5630 3550 6080 3550
-Entry Wire Line
-	6180 3370 6080 3470
-Entry Wire Line
-	6180 3450 6080 3550
 Wire Wire Line
 	7630 4180 7940 4180
 Wire Wire Line
@@ -1545,21 +1291,14 @@ Wire Wire Line
 	6580 4180 6540 4180
 Wire Wire Line
 	6490 4080 6490 4650
-Text Label 7680 3560 0    50   ~ 0
-K12-
-Text Label 7680 3480 0    50   ~ 0
-K12+
-Wire Wire Line
-	7630 3880 7630 3560
-Wire Wire Line
-	6580 3880 6580 3480
 $Comp
 L BVKSound:TQ2SA-5V-Z K12
 U 1 1 60D7CBBB
 P 5430 3880
 AR Path="/62E5E978/60D7CBBB" Ref="K12"  Part="1" 
 AR Path="/62E8A761/60D7CBBB" Ref="K?"  Part="1" 
-F 0 "K12" H 7105 4145 50  0000 C CNN
+AR Path="/605B7DEF/60D7CBBB" Ref="K9"  Part="1" 
+F 0 "K9" H 7105 4145 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 7105 4054 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 7480 3980 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 7480 3880 50  0001 L CNN
@@ -1579,14 +1318,6 @@ Wire Wire Line
 	6490 4650 7940 4650
 Wire Wire Line
 	6580 4080 6490 4080
-Wire Wire Line
-	6580 3480 8080 3480
-Wire Wire Line
-	7630 3560 8080 3560
-Entry Wire Line
-	8180 3380 8080 3480
-Entry Wire Line
-	8180 3460 8080 3560
 Wire Wire Line
 	9590 4170 9900 4170
 Wire Wire Line
@@ -1613,21 +1344,14 @@ Wire Wire Line
 	8540 4170 8500 4170
 Wire Wire Line
 	8450 4070 8450 4640
-Text Label 9640 3550 0    50   ~ 0
-K13-
-Text Label 9640 3470 0    50   ~ 0
-K13+
-Wire Wire Line
-	9590 3870 9590 3550
-Wire Wire Line
-	8540 3870 8540 3470
 $Comp
 L BVKSound:TQ2SA-5V-Z K13
 U 1 1 60D9E0FC
 P 7390 3870
 AR Path="/62E5E978/60D9E0FC" Ref="K13"  Part="1" 
 AR Path="/62E8A761/60D9E0FC" Ref="K?"  Part="1" 
-F 0 "K13" H 9065 4135 50  0000 C CNN
+AR Path="/605B7DEF/60D9E0FC" Ref="K12"  Part="1" 
+F 0 "K12" H 9065 4135 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 9065 4044 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 9440 3970 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 9440 3870 50  0001 L CNN
@@ -1647,14 +1371,6 @@ Wire Wire Line
 	8450 4640 9900 4640
 Wire Wire Line
 	8540 4070 8450 4070
-Wire Wire Line
-	8540 3470 10040 3470
-Wire Wire Line
-	9590 3550 10040 3550
-Entry Wire Line
-	10140 3370 10040 3470
-Entry Wire Line
-	10140 3450 10040 3550
 Connection ~ 11980 3300
 Wire Bus Line
 	11980 3300 11980 3310
@@ -1690,20 +1406,13 @@ Wire Wire Line
 	10520 4170 10480 4170
 Wire Wire Line
 	10430 4070 10430 4640
-Text Label 11620 3550 0    50   ~ 0
-K14-
-Text Label 11620 3470 0    50   ~ 0
-K14+
-Wire Wire Line
-	11570 3870 11570 3550
-Wire Wire Line
-	10520 3870 10520 3470
 $Comp
 L BVKSound:TQ2SA-5V-Z K14
 U 1 1 60E26180
 P 9370 3870
 AR Path="/62E5E978/60E26180" Ref="K14"  Part="1" 
 AR Path="/62E8A761/60E26180" Ref="K?"  Part="1" 
+AR Path="/605B7DEF/60E26180" Ref="K14"  Part="1" 
 F 0 "K14" H 11045 4135 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 11045 4044 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 11420 3970 50  0001 L CNN
@@ -1724,14 +1433,6 @@ Wire Wire Line
 	10430 4640 11880 4640
 Wire Wire Line
 	10520 4070 10430 4070
-Wire Wire Line
-	10520 3470 12020 3470
-Wire Wire Line
-	11570 3550 12020 3550
-Entry Wire Line
-	12120 3370 12020 3470
-Entry Wire Line
-	12120 3450 12020 3550
 Wire Wire Line
 	13530 4170 13840 4170
 Wire Wire Line
@@ -1758,21 +1459,14 @@ Wire Wire Line
 	12480 4170 12440 4170
 Wire Wire Line
 	12390 4070 12390 4640
-Text Label 13580 3550 0    50   ~ 0
-K15-
-Text Label 13580 3470 0    50   ~ 0
-K15+
-Wire Wire Line
-	13530 3870 13530 3550
-Wire Wire Line
-	12480 3870 12480 3470
 $Comp
 L BVKSound:TQ2SA-5V-Z K15
 U 1 1 60E4BD85
 P 11330 3870
 AR Path="/62E5E978/60E4BD85" Ref="K15"  Part="1" 
 AR Path="/62E8A761/60E4BD85" Ref="K?"  Part="1" 
-F 0 "K15" H 13005 4135 50  0000 C CNN
+AR Path="/605B7DEF/60E4BD85" Ref="K16"  Part="1" 
+F 0 "K16" H 13005 4135 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 13005 4044 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 13380 3970 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 13380 3870 50  0001 L CNN
@@ -1792,14 +1486,6 @@ Wire Wire Line
 	12390 4640 13840 4640
 Wire Wire Line
 	12480 4070 12390 4070
-Wire Wire Line
-	12480 3470 13980 3470
-Wire Wire Line
-	13530 3550 13980 3550
-Entry Wire Line
-	14080 3370 13980 3470
-Entry Wire Line
-	14080 3450 13980 3550
 Wire Wire Line
 	15410 4160 15720 4160
 Wire Wire Line
@@ -1826,21 +1512,14 @@ Wire Wire Line
 	14360 4160 14320 4160
 Wire Wire Line
 	14270 4060 14270 4630
-Text Label 15460 3540 0    50   ~ 0
-K16-
-Text Label 15460 3460 0    50   ~ 0
-K16+
-Wire Wire Line
-	15410 3860 15410 3540
-Wire Wire Line
-	14360 3860 14360 3460
 $Comp
 L BVKSound:TQ2SA-5V-Z K16
 U 1 1 60E74B93
 P 13210 3860
 AR Path="/62E5E978/60E74B93" Ref="K16"  Part="1" 
 AR Path="/62E8A761/60E74B93" Ref="K?"  Part="1" 
-F 0 "K16" H 14885 4125 50  0000 C CNN
+AR Path="/605B7DEF/60E74B93" Ref="K18"  Part="1" 
+F 0 "K18" H 14885 4125 50  0000 C CNN
 F 1 "TQ2SA-5V-Z" H 14885 4034 50  0000 C CNN
 F 2 "BVKSound:TQ2SAL23VZ" H 15260 3960 50  0001 L CNN
 F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 15260 3860 50  0001 L CNN
@@ -1860,86 +1539,20 @@ Wire Wire Line
 	14270 4630 15720 4630
 Wire Wire Line
 	14360 4060 14270 4060
-Wire Wire Line
-	14360 3460 15860 3460
-Wire Wire Line
-	15410 3540 15860 3540
-Entry Wire Line
-	15960 3360 15860 3460
-Entry Wire Line
-	15960 3440 15860 3540
 Wire Bus Line
 	15820 3290 15820 3300
-Connection ~ 15960 3170
 Text Notes 2020 7520 0    118  ~ 24
 BUS A Output
 Text Label 3630 8110 0    50   ~ 0
 BUSAMH
 Text Label 3630 8010 0    50   ~ 0
 BUSA.G
-Text Label 3690 7330 0    50   ~ 0
-A4.1
-Wire Wire Line
-	3420 7330 3420 7390
-Connection ~ 3420 7330
-Wire Wire Line
-	3950 7330 3420 7330
-Text Label 3690 7220 0    50   ~ 0
-A3.1
-Wire Wire Line
-	3420 7220 3420 7330
-Connection ~ 3420 7220
-Wire Wire Line
-	3420 7110 3420 7220
-Wire Wire Line
-	3950 7220 3420 7220
-Text Label 3690 7110 0    50   ~ 0
-A2.1
-Entry Wire Line
-	4050 7230 3950 7330
-Entry Wire Line
-	4050 7120 3950 7220
-Wire Wire Line
-	3420 7110 3420 7000
-Connection ~ 3420 7110
-Wire Wire Line
-	3950 7110 3420 7110
-Text Label 3690 7000 0    50   ~ 0
-A1.1
-Text Label 3680 6890 0    50   ~ 0
-BUSA.1
-Wire Wire Line
-	3420 7000 3420 6890
-Connection ~ 3420 7000
-Wire Wire Line
-	3950 7000 3420 7000
-Wire Wire Line
-	3420 6890 3950 6890
-Entry Wire Line
-	4050 7010 3950 7110
-Entry Wire Line
-	4050 6900 3950 7000
-Entry Wire Line
-	4050 6790 3950 6890
-$Comp
-L power:GND2 #PWR0122
-U 1 1 6087E8BE
-P 3420 7390
-AR Path="/62E5E978/6087E8BE" Ref="#PWR0122"  Part="1" 
-AR Path="/62E8A761/6087E8BE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0122" H 3420 7140 50  0001 C CNN
-F 1 "GND2" H 3425 7217 50  0000 C CNN
-F 2 "" H 3420 7390 50  0001 C CNN
-F 3 "" H 3420 7390 50  0001 C CNN
-	1    3420 7390
-	1    0    0    -1  
-$EndComp
 Text Label 3690 8690 0    50   ~ 0
 BUSA.1
 Text Label 3690 8570 0    50   ~ 0
-BUSA.2
+OUTA.2
 Text Label 3690 8450 0    50   ~ 0
-BUSA.3
+OUTA.3
 Wire Wire Line
 	2310 8690 3950 8690
 Wire Wire Line
@@ -1978,6 +1591,7 @@ U 1 1 6039C08D
 P 2660 8010
 AR Path="/62E5E978/6039C08D" Ref="BUS_A1"  Part="1" 
 AR Path="/62E8A761/6039C08D" Ref="BUS_A?"  Part="1" 
+AR Path="/605B7DEF/6039C08D" Ref="BUS_A1"  Part="1" 
 F 0 "BUS_A1" H 3110 8275 50  0000 C CNN
 F 1 "NC3MD-H" H 3110 8184 50  0000 C CNN
 F 2 "BVKSound:NC3MDH" H 3410 8110 50  0001 L CNN
@@ -1998,15 +1612,6 @@ Wire Bus Line
 Wire Bus Line
 	4050 4560 4050 4840
 Connection ~ 4050 4840
-Text HLabel 3960 4940 0    50   Input ~ 0
-BUS_RELAY_COIL
-Wire Bus Line
-	3960 4940 4190 4940
-Connection ~ 4190 4940
-Text HLabel 3310 7000 0    50   Input ~ 0
-GND
-Wire Wire Line
-	3310 7000 3420 7000
 Text HLabel 2060 6560 0    50   Input ~ 0
 Phantom_48V_COLD_A
 Text HLabel 6050 6170 0    50   Input ~ 0
@@ -2017,44 +1622,471 @@ Wire Wire Line
 	3680 6560 2060 6560
 Wire Wire Line
 	7670 6540 6050 6540
-Text HLabel 7300 6980 0    50   Input ~ 0
+Text HLabel 9880 6700 2    50   Input ~ 0
 GND
+Text GLabel 1690 2240 2    50   Input ~ 0
+K1-
+Text GLabel 3640 2240 2    50   Input ~ 0
+K2-
+Text GLabel 640  2240 0    50   Input ~ 0
+K1+
+Text GLabel 2590 2240 0    50   Input ~ 0
+K2+
+Text GLabel 4580 2250 0    50   Input ~ 0
+K3+
+Text GLabel 5630 2250 2    50   Input ~ 0
+K3-
+Text GLabel 6580 2260 0    50   Input ~ 0
+K4+
+Text GLabel 7630 2260 2    50   Input ~ 0
+K4-
+Text GLabel 8540 2260 0    50   Input ~ 0
+K5+
+Text GLabel 9590 2260 2    50   Input ~ 0
+K5-
+Text GLabel 10520 2290 0    50   Input ~ 0
+K6+
+Text GLabel 11570 2290 2    50   Input ~ 0
+K6-
+Text GLabel 12480 2260 0    50   Input ~ 0
+K7+
+Text GLabel 13530 2260 2    50   Input ~ 0
+K7-
+Text GLabel 14360 2260 0    50   Input ~ 0
+K8+
+Text GLabel 15410 2260 2    50   Input ~ 0
+K8-
+Text GLabel 640  3860 0    50   Input ~ 0
+K9+
+Text GLabel 1690 3860 2    50   Input ~ 0
+K9-
+Text GLabel 2590 3880 0    50   Input ~ 0
+K10+
+Text GLabel 3640 3880 2    50   Input ~ 0
+K10-
+Text GLabel 4580 3870 0    50   Input ~ 0
+K11+
+Text GLabel 5630 3870 2    50   Input ~ 0
+K11-
+Text GLabel 6580 3880 0    50   Input ~ 0
+K12+
+Text GLabel 7630 3880 2    50   Input ~ 0
+K12-
+Text GLabel 8540 3870 0    50   Input ~ 0
+K13+
+Text GLabel 9590 3870 2    50   Input ~ 0
+K13-
+Text GLabel 10520 3870 0    50   Input ~ 0
+K14+
+Text GLabel 11570 3870 2    50   Input ~ 0
+K14-
+Text GLabel 12480 3870 0    50   Input ~ 0
+K15+
+Text GLabel 13530 3870 2    50   Input ~ 0
+K15-
+Text GLabel 14360 3860 0    50   Input ~ 0
+K16+
+Text GLabel 15410 3860 2    50   Input ~ 0
+K16-
+Text GLabel 2590 5990 0    50   Input ~ 0
+K17+
+Text GLabel 3640 5990 2    50   Input ~ 0
+K17-
+Text GLabel 6580 5970 0    50   Input ~ 0
+K18+
+Text GLabel 7630 5970 2    50   Input ~ 0
+K18-
 Wire Wire Line
-	7300 6980 7410 6980
+	3640 9370 3950 9370
+Wire Wire Line
+	3640 9270 3950 9270
+Text Label 3680 9370 0    50   ~ 0
+BUSA.3
+Text Label 3680 9270 0    50   ~ 0
+OUTA.3
+Wire Wire Line
+	2550 9370 2550 9750
+Wire Wire Line
+	2590 9370 2550 9370
+Wire Wire Line
+	2500 9270 2500 9840
+$Comp
+L BVKSound:TQ2SA-5V-Z K?
+U 1 1 606813AF
+P 1440 9070
+AR Path="/62E5E978/606813AF" Ref="K?"  Part="1" 
+AR Path="/62E8A761/606813AF" Ref="K?"  Part="1" 
+AR Path="/605B7DEF/606813AF" Ref="K19"  Part="1" 
+F 0 "K19" H 3115 9335 50  0000 C CNN
+F 1 "TQ2SA-5V-Z" H 3115 9244 50  0000 C CNN
+F 2 "BVKSound:TQ2SAL23VZ" H 3490 9170 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 3490 9070 50  0001 L CNN
+F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 3490 8970 50  0001 L CNN "Description"
+F 5 "Panasonic" H 3490 8770 50  0001 L CNN "Manufacturer_Name"
+F 6 "TQ2SA-5V-Z" H 3490 8670 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "769-TQ2SA5VZ" H 3490 8570 50  0001 L CNN "Mouser Part Number"
+F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 3490 8470 50  0001 L CNN "Mouser Price/Stock"
+F 9 "TQ2SA-5V-Z" H 3490 8370 50  0001 L CNN "Arrow Part Number"
+F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 3490 8270 50  0001 L CNN "Arrow Price/Stock"
+	1    1440 9070
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2590 9270 2500 9270
+Text GLabel 3640 9070 2    50   Input ~ 0
+K19-
+Text GLabel 2590 9070 0    50   Input ~ 0
+K19+
+Entry Wire Line
+	4050 9170 3950 9270
+Entry Wire Line
+	4050 9270 3950 9370
+Entry Wire Line
+	4050 9650 3950 9750
+Entry Wire Line
+	4050 9740 3950 9840
+Wire Wire Line
+	2550 9750 3950 9750
+Wire Wire Line
+	2500 9840 3950 9840
+Text Label 3690 9840 0    50   ~ 0
+OUTA.2
+Text Label 3690 9750 0    50   ~ 0
+BUSA.2
+Wire Wire Line
+	7630 9330 7940 9330
+Wire Wire Line
+	7630 9230 7940 9230
+Text Label 7670 9330 0    50   ~ 0
+BUSB.3
+Text Label 7670 9230 0    50   ~ 0
+OUTB.3
+Wire Wire Line
+	6540 9330 6540 9710
+Wire Wire Line
+	6580 9330 6540 9330
+Wire Wire Line
+	6490 9230 6490 9800
+$Comp
+L BVKSound:TQ2SA-5V-Z K?
+U 1 1 606FA2B3
+P 5430 9030
+AR Path="/62E5E978/606FA2B3" Ref="K?"  Part="1" 
+AR Path="/62E8A761/606FA2B3" Ref="K?"  Part="1" 
+AR Path="/605B7DEF/606FA2B3" Ref="K20"  Part="1" 
+F 0 "K20" H 7105 9295 50  0000 C CNN
+F 1 "TQ2SA-5V-Z" H 7105 9204 50  0000 C CNN
+F 2 "BVKSound:TQ2SAL23VZ" H 7480 9130 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 7480 9030 50  0001 L CNN
+F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 7480 8930 50  0001 L CNN "Description"
+F 5 "Panasonic" H 7480 8730 50  0001 L CNN "Manufacturer_Name"
+F 6 "TQ2SA-5V-Z" H 7480 8630 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "769-TQ2SA5VZ" H 7480 8530 50  0001 L CNN "Mouser Part Number"
+F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 7480 8430 50  0001 L CNN "Mouser Price/Stock"
+F 9 "TQ2SA-5V-Z" H 7480 8330 50  0001 L CNN "Arrow Part Number"
+F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 7480 8230 50  0001 L CNN "Arrow Price/Stock"
+	1    5430 9030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6580 9230 6490 9230
+Text GLabel 7630 9030 2    50   Input ~ 0
+K20-
+Text GLabel 6580 9030 0    50   Input ~ 0
+K20+
+Entry Wire Line
+	8040 9130 7940 9230
+Entry Wire Line
+	8040 9230 7940 9330
+Entry Wire Line
+	8040 9610 7940 9710
+Entry Wire Line
+	8040 9700 7940 9800
+Wire Wire Line
+	6540 9710 7940 9710
+Wire Wire Line
+	6490 9800 7940 9800
+Text Label 7680 9800 0    50   ~ 0
+OUTB.2
+Text Label 7680 9710 0    50   ~ 0
+BUSB.2
 Wire Bus Line
-	15960 3170 15960 3440
+	9190 9860 9170 9860
+Entry Wire Line
+	9190 5090 9290 5190
+Entry Wire Line
+	9190 5200 9290 5300
+Entry Wire Line
+	9190 5310 9290 5410
+Entry Wire Line
+	9190 5420 9290 5520
+Entry Wire Line
+	9190 5520 9290 5620
+Entry Wire Line
+	9190 5620 9290 5720
+Entry Wire Line
+	9190 5730 9290 5830
+Entry Wire Line
+	9190 5830 9290 5930
+Entry Wire Line
+	9190 5940 9290 6040
+Entry Wire Line
+	9190 6030 9290 6130
+Wire Wire Line
+	9290 5190 9760 5190
+Wire Wire Line
+	9760 5190 9760 5300
+Wire Wire Line
+	9760 9830 9780 9830
+Text Label 9290 5190 0    50   ~ 0
+IN1.5
+Wire Wire Line
+	9290 5300 9760 5300
+Connection ~ 9760 5300
+Wire Wire Line
+	9760 5300 9760 5410
+Wire Wire Line
+	9290 5410 9760 5410
+Connection ~ 9760 5410
+Wire Wire Line
+	9760 5410 9760 5520
+Wire Wire Line
+	9290 5520 9760 5520
+Connection ~ 9760 5520
+Wire Wire Line
+	9760 5520 9760 5620
+Wire Wire Line
+	9290 5620 9760 5620
+Connection ~ 9760 5620
+Wire Wire Line
+	9290 5720 9760 5720
+Wire Wire Line
+	9290 5830 9760 5830
+Connection ~ 9760 5830
+Wire Wire Line
+	9760 5830 9760 5930
+Wire Wire Line
+	9760 5620 9760 5720
+Connection ~ 9760 5720
+Wire Wire Line
+	9760 5720 9760 5830
+Text Label 9290 5300 0    50   ~ 0
+IN2.5
+Text Label 9290 5410 0    50   ~ 0
+IN3.5
+Text Label 9290 5520 0    50   ~ 0
+IN4.5
+Text Label 9290 5620 0    50   ~ 0
+IN5.5
+Text Label 9290 5720 0    50   ~ 0
+IN6.5
+Text Label 9290 5830 0    50   ~ 0
+IN7.5
+Wire Wire Line
+	9290 5930 9760 5930
+Connection ~ 9760 5930
+Wire Wire Line
+	9760 5930 9760 6040
+Text Label 9290 5930 0    50   ~ 0
+IN8.5
+Wire Wire Line
+	9290 6040 9760 6040
+Connection ~ 9760 6040
+Wire Wire Line
+	9760 6040 9760 6130
+Text Label 9290 6040 0    50   ~ 0
+BUSA.G
+Wire Wire Line
+	9290 6130 9760 6130
+Text Label 9290 6130 0    50   ~ 0
+BUSB.G
 Wire Bus Line
-	14080 3180 14080 3450
+	9190 4840 8040 4840
+Connection ~ 8040 4840
+Entry Wire Line
+	9190 6490 9290 6590
+Entry Wire Line
+	9190 6600 9290 6700
+Entry Wire Line
+	9190 6710 9290 6810
+Entry Wire Line
+	9190 6820 9290 6920
+Entry Wire Line
+	9190 6920 9290 7020
+Entry Wire Line
+	9190 7020 9290 7120
+Entry Wire Line
+	9190 7130 9290 7230
+Entry Wire Line
+	9190 7230 9290 7330
+Entry Wire Line
+	9190 7340 9290 7440
+Entry Wire Line
+	9190 7430 9290 7530
+Wire Wire Line
+	9290 6590 9760 6590
+Wire Wire Line
+	9760 6590 9760 6700
+Text Label 9290 6590 0    50   ~ 0
+IN1.1
+Wire Wire Line
+	9290 6700 9760 6700
+Connection ~ 9760 6700
+Wire Wire Line
+	9760 6700 9760 6810
+Wire Wire Line
+	9290 6810 9760 6810
+Connection ~ 9760 6810
+Wire Wire Line
+	9760 6810 9760 6920
+Wire Wire Line
+	9290 6920 9760 6920
+Connection ~ 9760 6920
+Wire Wire Line
+	9760 6920 9760 7020
+Wire Wire Line
+	9290 7020 9760 7020
+Connection ~ 9760 7020
+Wire Wire Line
+	9290 7120 9760 7120
+Wire Wire Line
+	9290 7230 9760 7230
+Connection ~ 9760 7230
+Wire Wire Line
+	9760 7230 9760 7330
+Wire Wire Line
+	9760 7020 9760 7120
+Connection ~ 9760 7120
+Wire Wire Line
+	9760 7120 9760 7230
+Text Label 9290 6700 0    50   ~ 0
+IN2.1
+Text Label 9290 6810 0    50   ~ 0
+IN3.1
+Text Label 9290 6920 0    50   ~ 0
+IN4.1
+Text Label 9290 7020 0    50   ~ 0
+IN5.1
+Text Label 9290 7120 0    50   ~ 0
+IN6.1
+Text Label 9290 7230 0    50   ~ 0
+IN7.1
+Wire Wire Line
+	9290 7330 9760 7330
+Connection ~ 9760 7330
+Wire Wire Line
+	9760 7330 9760 7440
+Text Label 9290 7330 0    50   ~ 0
+IN8.1
+Wire Wire Line
+	9290 7440 9760 7440
+Connection ~ 9760 7440
+Wire Wire Line
+	9760 7440 9760 7530
+Text Label 9290 7440 0    50   ~ 0
+BUSA.1
+Wire Wire Line
+	9290 7530 9760 7530
+Text Label 9290 7530 0    50   ~ 0
+BUSB.1
 Wire Bus Line
-	12120 3180 12120 3450
+	9190 6240 8040 6240
+Connection ~ 8040 6240
+Wire Wire Line
+	9760 7610 9760 7530
+Connection ~ 9760 7530
+Wire Wire Line
+	9880 6700 9760 6700
+Entry Wire Line
+	9900 5100 10000 5200
+Entry Wire Line
+	9900 5210 10000 5310
+Entry Wire Line
+	9900 5320 10000 5420
+Entry Wire Line
+	9900 5430 10000 5530
+Entry Wire Line
+	9900 5530 10000 5630
+Entry Wire Line
+	9900 5630 10000 5730
+Entry Wire Line
+	9900 5740 10000 5840
+Entry Wire Line
+	9900 5840 10000 5940
+Entry Wire Line
+	9900 5950 10000 6050
+Entry Wire Line
+	9900 6040 10000 6140
+Wire Wire Line
+	10000 5200 10470 5200
+Wire Wire Line
+	10470 5200 10470 5310
+Text Label 10000 5200 0    50   ~ 0
+IN1.4
+Wire Wire Line
+	10000 5310 10470 5310
+Connection ~ 10470 5310
+Wire Wire Line
+	10470 5310 10470 5420
+Wire Wire Line
+	10000 5420 10470 5420
+Connection ~ 10470 5420
+Wire Wire Line
+	10470 5420 10470 5530
+Wire Wire Line
+	10000 5530 10470 5530
+Connection ~ 10470 5530
+Wire Wire Line
+	10470 5530 10470 5630
+Wire Wire Line
+	10000 5630 10470 5630
+Connection ~ 10470 5630
+Wire Wire Line
+	10000 5730 10470 5730
+Wire Wire Line
+	10000 5840 10470 5840
+Connection ~ 10470 5840
+Wire Wire Line
+	10470 5840 10470 5940
+Wire Wire Line
+	10470 5630 10470 5730
+Connection ~ 10470 5730
+Wire Wire Line
+	10470 5730 10470 5840
+Text Label 10000 5310 0    50   ~ 0
+IN2.4
+Text Label 10000 5420 0    50   ~ 0
+IN3.4
+Text Label 10000 5530 0    50   ~ 0
+IN4.4
+Text Label 10000 5630 0    50   ~ 0
+IN5.4
+Text Label 10000 5730 0    50   ~ 0
+IN6.4
+Text Label 10000 5840 0    50   ~ 0
+IN7.4
+Wire Wire Line
+	10000 5940 10470 5940
+Connection ~ 10470 5940
+Wire Wire Line
+	10470 5940 10470 6050
+Text Label 10000 5940 0    50   ~ 0
+IN8.4
+Wire Wire Line
+	10000 6050 10470 6050
+Connection ~ 10470 6050
+Wire Wire Line
+	10470 6050 10470 6140
+Text Label 10000 6050 0    50   ~ 0
+BUSAMH
+Wire Wire Line
+	10000 6140 10470 6140
+Text Label 10000 6140 0    50   ~ 0
+BUSBMH
 Wire Bus Line
-	10140 3180 10140 3450
+	9900 4840 9190 4840
 Wire Bus Line
-	6180 3180 6180 3450
-Wire Bus Line
-	2240 3170 2240 3440
-Wire Bus Line
-	15960 1760 15960 3170
-Wire Bus Line
-	14080 1760 14080 3170
-Wire Bus Line
-	12120 1790 12120 3170
-Wire Bus Line
-	10140 1760 10140 3170
-Wire Bus Line
-	8180 1760 8180 3170
-Wire Bus Line
-	6180 1750 6180 3170
-Wire Bus Line
-	4190 1740 4190 3170
-Wire Bus Line
-	2240 1740 2240 3170
-Wire Bus Line
-	4190 4940 4190 5590
-Wire Bus Line
-	4190 3190 4190 4940
-Wire Bus Line
-	8180 3190 8180 5570
+	8040 4840 8040 6240
 Wire Bus Line
 	15820 3300 15820 4530
 Wire Bus Line
@@ -2069,6 +2101,8 @@ Wire Bus Line
 	4050 3320 4050 4550
 Wire Bus Line
 	2100 3300 2100 4530
+Wire Bus Line
+	8040 3320 8040 4840
 Wire Bus Line
 	15820 1060 15820 3300
 Wire Bus Line
@@ -2086,7 +2120,14 @@ Wire Bus Line
 Wire Bus Line
 	2100 1040 2100 3300
 Wire Bus Line
-	8040 3320 8040 8570
+	9190 4840 9190 6040
 Wire Bus Line
-	4050 4840 4050 8590
+	9190 6240 9190 7440
+Wire Bus Line
+	8040 6240 8040 9700
+Wire Bus Line
+	4050 4840 4050 9740
+Wire Bus Line
+	9900 4840 9900 6050
+Connection ~ 9190 4840
 $EndSCHEMATC
