@@ -950,8 +950,8 @@ F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 3490 5190 50  00
 	1    1440 5990
 	1    0    0    -1  
 $EndComp
-Text HLabel 2060 6190 0    50   Input ~ 0
-Phantom_48V_HOT_A
+Text HLabel 1290 6370 0    50   Input ~ 0
+Phantom_48V
 Wire Wire Line
 	3640 6190 3680 6190
 Wire Wire Line
@@ -1612,16 +1612,8 @@ Wire Bus Line
 Wire Bus Line
 	4050 4560 4050 4840
 Connection ~ 4050 4840
-Text HLabel 2060 6560 0    50   Input ~ 0
-Phantom_48V_COLD_A
-Text HLabel 6050 6170 0    50   Input ~ 0
-Phantom_48V_HOT_B
-Text HLabel 6050 6540 0    50   Input ~ 0
-Phantom_48V_COLD_B
 Wire Wire Line
 	3680 6560 2060 6560
-Wire Wire Line
-	7670 6540 6050 6540
 Text HLabel 9880 6700 2    50   Input ~ 0
 GND
 Text GLabel 1690 2240 2    50   Input ~ 0
@@ -1696,46 +1688,42 @@ Text GLabel 6580 5970 0    50   Input ~ 0
 K18+
 Text GLabel 7630 5970 2    50   Input ~ 0
 K18-
-Wire Wire Line
-	3640 9370 3950 9370
-Wire Wire Line
-	3640 9270 3950 9270
-Text Label 3680 9370 0    50   ~ 0
+Text Label 3060 9370 0    50   ~ 0
 BUSA.3
-Text Label 3680 9270 0    50   ~ 0
+Text Label 3060 9270 0    50   ~ 0
 OUTA.3
 Wire Wire Line
-	2550 9370 2550 9750
+	1930 9370 1930 9750
 Wire Wire Line
-	2590 9370 2550 9370
+	1970 9370 1930 9370
 Wire Wire Line
-	2500 9270 2500 9840
+	1880 9270 1880 9840
 $Comp
 L BVKSound:TQ2SA-5V-Z K?
 U 1 1 606813AF
-P 1440 9070
+P 820 9070
 AR Path="/62E5E978/606813AF" Ref="K?"  Part="1" 
 AR Path="/62E8A761/606813AF" Ref="K?"  Part="1" 
 AR Path="/605B7DEF/606813AF" Ref="K19"  Part="1" 
-F 0 "K19" H 3115 9335 50  0000 C CNN
-F 1 "TQ2SA-5V-Z" H 3115 9244 50  0000 C CNN
-F 2 "BVKSound:TQ2SAL23VZ" H 3490 9170 50  0001 L CNN
-F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 3490 9070 50  0001 L CNN
-F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 3490 8970 50  0001 L CNN "Description"
-F 5 "Panasonic" H 3490 8770 50  0001 L CNN "Manufacturer_Name"
-F 6 "TQ2SA-5V-Z" H 3490 8670 50  0001 L CNN "Manufacturer_Part_Number"
-F 7 "769-TQ2SA5VZ" H 3490 8570 50  0001 L CNN "Mouser Part Number"
-F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 3490 8470 50  0001 L CNN "Mouser Price/Stock"
-F 9 "TQ2SA-5V-Z" H 3490 8370 50  0001 L CNN "Arrow Part Number"
-F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 3490 8270 50  0001 L CNN "Arrow Price/Stock"
-	1    1440 9070
+F 0 "K19" H 2495 9335 50  0000 C CNN
+F 1 "TQ2SA-5V-Z" H 2495 9244 50  0000 C CNN
+F 2 "BVKSound:TQ2SAL23VZ" H 2870 9170 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 2870 9070 50  0001 L CNN
+F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 2870 8970 50  0001 L CNN "Description"
+F 5 "Panasonic" H 2870 8770 50  0001 L CNN "Manufacturer_Name"
+F 6 "TQ2SA-5V-Z" H 2870 8670 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "769-TQ2SA5VZ" H 2870 8570 50  0001 L CNN "Mouser Part Number"
+F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 2870 8470 50  0001 L CNN "Mouser Price/Stock"
+F 9 "TQ2SA-5V-Z" H 2870 8370 50  0001 L CNN "Arrow Part Number"
+F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 2870 8270 50  0001 L CNN "Arrow Price/Stock"
+	1    820  9070
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2590 9270 2500 9270
-Text GLabel 3640 9070 2    50   Input ~ 0
+	1970 9270 1880 9270
+Text GLabel 3020 9070 2    50   Input ~ 0
 K19-
-Text GLabel 2590 9070 0    50   Input ~ 0
+Text GLabel 1970 9070 0    50   Input ~ 0
 K19+
 Entry Wire Line
 	4050 9170 3950 9270
@@ -1745,70 +1733,58 @@ Entry Wire Line
 	4050 9650 3950 9750
 Entry Wire Line
 	4050 9740 3950 9840
-Wire Wire Line
-	2550 9750 3950 9750
-Wire Wire Line
-	2500 9840 3950 9840
-Text Label 3690 9840 0    50   ~ 0
+Text Label 3070 9840 0    50   ~ 0
 OUTA.2
-Text Label 3690 9750 0    50   ~ 0
+Text Label 3070 9750 0    50   ~ 0
 BUSA.2
-Wire Wire Line
-	7630 9330 7940 9330
-Wire Wire Line
-	7630 9230 7940 9230
-Text Label 7670 9330 0    50   ~ 0
+Text Label 6950 9320 0    50   ~ 0
 BUSB.3
-Text Label 7670 9230 0    50   ~ 0
+Text Label 6950 9220 0    50   ~ 0
 OUTB.3
 Wire Wire Line
-	6540 9330 6540 9710
+	5820 9320 5820 9700
 Wire Wire Line
-	6580 9330 6540 9330
+	5860 9320 5820 9320
 Wire Wire Line
-	6490 9230 6490 9800
+	5770 9220 5770 9790
 $Comp
 L BVKSound:TQ2SA-5V-Z K?
 U 1 1 606FA2B3
-P 5430 9030
+P 4710 9020
 AR Path="/62E5E978/606FA2B3" Ref="K?"  Part="1" 
 AR Path="/62E8A761/606FA2B3" Ref="K?"  Part="1" 
 AR Path="/605B7DEF/606FA2B3" Ref="K20"  Part="1" 
-F 0 "K20" H 7105 9295 50  0000 C CNN
-F 1 "TQ2SA-5V-Z" H 7105 9204 50  0000 C CNN
-F 2 "BVKSound:TQ2SAL23VZ" H 7480 9130 50  0001 L CNN
-F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 7480 9030 50  0001 L CNN
-F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 7480 8930 50  0001 L CNN "Description"
-F 5 "Panasonic" H 7480 8730 50  0001 L CNN "Manufacturer_Name"
-F 6 "TQ2SA-5V-Z" H 7480 8630 50  0001 L CNN "Manufacturer_Part_Number"
-F 7 "769-TQ2SA5VZ" H 7480 8530 50  0001 L CNN "Mouser Part Number"
-F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 7480 8430 50  0001 L CNN "Mouser Price/Stock"
-F 9 "TQ2SA-5V-Z" H 7480 8330 50  0001 L CNN "Arrow Part Number"
-F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 7480 8230 50  0001 L CNN "Arrow Price/Stock"
-	1    5430 9030
+F 0 "K20" H 6385 9285 50  0000 C CNN
+F 1 "TQ2SA-5V-Z" H 6385 9194 50  0000 C CNN
+F 2 "BVKSound:TQ2SAL23VZ" H 6760 9120 50  0001 L CNN
+F 3 "https://industrial.panasonic.com/ac/cdn/e/control/relay/signal/catalog/mech_eng_tq.pdf" H 6760 9020 50  0001 L CNN
+F 4 "PANASONIC - TQ2SA-5V-Z - RELAY, SIGNAL, DPDT, 30VDC, 2A" H 6760 8920 50  0001 L CNN "Description"
+F 5 "Panasonic" H 6760 8720 50  0001 L CNN "Manufacturer_Name"
+F 6 "TQ2SA-5V-Z" H 6760 8620 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "769-TQ2SA5VZ" H 6760 8520 50  0001 L CNN "Mouser Part Number"
+F 8 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/TQ2SA-5V-Z/?qs=HLLy2pIPwusDvK2M74sAxg%3D%3D" H 6760 8420 50  0001 L CNN "Mouser Price/Stock"
+F 9 "TQ2SA-5V-Z" H 6760 8320 50  0001 L CNN "Arrow Part Number"
+F 10 "https://www.arrow.com/en/products/tq2sa-5v-z/panasonic" H 6760 8220 50  0001 L CNN "Arrow Price/Stock"
+	1    4710 9020
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6580 9230 6490 9230
-Text GLabel 7630 9030 2    50   Input ~ 0
+	5860 9220 5770 9220
+Text GLabel 6910 9020 2    50   Input ~ 0
 K20-
-Text GLabel 6580 9030 0    50   Input ~ 0
+Text GLabel 5860 9020 0    50   Input ~ 0
 K20+
 Entry Wire Line
-	8040 9130 7940 9230
+	8040 9120 7940 9220
 Entry Wire Line
-	8040 9230 7940 9330
+	8040 9220 7940 9320
 Entry Wire Line
-	8040 9610 7940 9710
+	8040 9600 7940 9700
 Entry Wire Line
-	8040 9700 7940 9800
-Wire Wire Line
-	6540 9710 7940 9710
-Wire Wire Line
-	6490 9800 7940 9800
-Text Label 7680 9800 0    50   ~ 0
+	8040 9690 7940 9790
+Text Label 6960 9790 0    50   ~ 0
 OUTB.2
-Text Label 7680 9710 0    50   ~ 0
+Text Label 6960 9700 0    50   ~ 0
 BUSB.2
 Wire Bus Line
 	9190 9860 9170 9860
@@ -2085,6 +2061,161 @@ Text Label 10000 6140 0    50   ~ 0
 BUSBMH
 Wire Bus Line
 	9900 4840 9190 4840
+Connection ~ 9190 4840
+$Comp
+L Device:R_Small_US R45
+U 1 1 6051E38C
+P 1440 6580
+F 0 "R45" H 1508 6626 50  0000 L CNN
+F 1 "6K8" H 1508 6535 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 1440 6580 50  0001 C CNN
+F 3 "~" H 1440 6580 50  0001 C CNN
+	1    1440 6580
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R44
+U 1 1 6051EC2B
+P 1440 6120
+F 0 "R44" H 1508 6166 50  0000 L CNN
+F 1 "6K8" H 1508 6075 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 1440 6120 50  0001 C CNN
+F 3 "~" H 1440 6120 50  0001 C CNN
+	1    1440 6120
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1290 6370 1440 6370
+Wire Wire Line
+	1440 6370 1440 6220
+Wire Wire Line
+	1440 6480 1440 6370
+Connection ~ 1440 6370
+Wire Wire Line
+	1440 6020 1440 5880
+Wire Wire Line
+	1440 5880 2060 5880
+Wire Wire Line
+	2060 5880 2060 6190
+Wire Wire Line
+	1440 6680 1440 6860
+Wire Wire Line
+	1440 6860 2060 6860
+Wire Wire Line
+	2060 6860 2060 6560
+Text HLabel 5270 6370 0    50   Input ~ 0
+Phantom_48V
+$Comp
+L Device:R_Small_US R47
+U 1 1 60627508
+P 5420 6580
+F 0 "R47" H 5488 6626 50  0000 L CNN
+F 1 "6K8" H 5488 6535 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5420 6580 50  0001 C CNN
+F 3 "~" H 5420 6580 50  0001 C CNN
+	1    5420 6580
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R46
+U 1 1 60627512
+P 5420 6120
+F 0 "R46" H 5488 6166 50  0000 L CNN
+F 1 "6K8" H 5488 6075 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5420 6120 50  0001 C CNN
+F 3 "~" H 5420 6120 50  0001 C CNN
+	1    5420 6120
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5270 6370 5420 6370
+Wire Wire Line
+	5420 6370 5420 6220
+Wire Wire Line
+	5420 6480 5420 6370
+Connection ~ 5420 6370
+Wire Wire Line
+	5420 6020 5420 5880
+Wire Wire Line
+	5420 6680 5420 6860
+Wire Wire Line
+	5420 6860 6040 6860
+Wire Wire Line
+	6050 6170 6050 5880
+Wire Wire Line
+	5420 5880 6050 5880
+Wire Wire Line
+	6040 6860 6040 6540
+Wire Wire Line
+	6040 6540 7670 6540
+Wire Wire Line
+	6910 9220 7530 9220
+Wire Wire Line
+	6910 9320 7940 9320
+Wire Wire Line
+	5820 9700 7940 9700
+Wire Wire Line
+	5770 9790 7530 9790
+Wire Wire Line
+	1880 9840 3550 9840
+Wire Wire Line
+	1930 9750 3950 9750
+Wire Wire Line
+	3020 9370 3950 9370
+Wire Wire Line
+	3020 9270 3550 9270
+Wire Wire Line
+	3750 9270 3950 9270
+Wire Wire Line
+	3750 9840 3950 9840
+Wire Wire Line
+	7730 9220 7940 9220
+Wire Wire Line
+	7730 9790 7940 9790
+$Comp
+L Device:CP1_Small C23
+U 1 1 6093F458
+P 7630 9220
+F 0 "C23" V 7402 9220 50  0000 C CNN
+F 1 "47uF" V 7493 9220 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 7630 9220 50  0001 C CNN
+F 3 "~" H 7630 9220 50  0001 C CNN
+	1    7630 9220
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C21
+U 1 1 609402B4
+P 3650 9270
+F 0 "C21" V 3422 9270 50  0000 C CNN
+F 1 "47uF" V 3513 9270 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 3650 9270 50  0001 C CNN
+F 3 "~" H 3650 9270 50  0001 C CNN
+	1    3650 9270
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C22
+U 1 1 6096AD77
+P 3650 9840
+F 0 "C22" V 3878 9840 50  0000 C CNN
+F 1 "47uF" V 3787 9840 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 3650 9840 50  0001 C CNN
+F 3 "~" H 3650 9840 50  0001 C CNN
+	1    3650 9840
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C24
+U 1 1 60ABCF91
+P 7630 9790
+F 0 "C24" V 7402 9790 50  0000 C CNN
+F 1 "47uF" V 7493 9790 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 7630 9790 50  0001 C CNN
+F 3 "~" H 7630 9790 50  0001 C CNN
+	1    7630 9790
+	0    1    1    0   
+$EndComp
 Wire Bus Line
 	8040 4840 8040 6240
 Wire Bus Line
@@ -2103,6 +2234,8 @@ Wire Bus Line
 	2100 3300 2100 4530
 Wire Bus Line
 	8040 3320 8040 4840
+Wire Bus Line
+	8040 6240 8040 9700
 Wire Bus Line
 	15820 1060 15820 3300
 Wire Bus Line
@@ -2124,10 +2257,7 @@ Wire Bus Line
 Wire Bus Line
 	9190 6240 9190 7440
 Wire Bus Line
-	8040 6240 8040 9700
-Wire Bus Line
 	4050 4840 4050 9740
 Wire Bus Line
 	9900 4840 9900 6050
-Connection ~ 9190 4840
 $EndSCHEMATC

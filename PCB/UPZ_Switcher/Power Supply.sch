@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 1
 Title ""
 Date "2021-02-26"
 Rev ""
@@ -288,17 +288,6 @@ Wire Wire Line
 	6180 3190 5880 3190
 Connection ~ 5880 3190
 $Comp
-L Device:R_POT_TRIM RV1
-U 1 1 604733D1
-P 4790 2600
-F 0 "RV1" H 4721 2646 50  0000 R CNN
-F 1 "5K6" H 4721 2555 50  0000 R CNN
-F 2 "" H 4790 2600 50  0001 C CNN
-F 3 "~" H 4790 2600 50  0001 C CNN
-	1    4790 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R1
 U 1 1 60474575
 P 5120 1970
@@ -309,15 +298,9 @@ F 3 "~" H 5120 1970 50  0001 C CNN
 	1    5120 1970
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4790 2750 4790 3190
 Connection ~ 4790 3190
 Wire Wire Line
 	4790 3190 4200 3190
-Wire Wire Line
-	4940 2600 5120 2600
-Wire Wire Line
-	5120 2600 5120 2070
 Wire Wire Line
 	5120 1870 5120 1690
 Connection ~ 5120 1690
@@ -331,265 +314,8 @@ Wire Wire Line
 	4640 800  4200 800 
 Wire Wire Line
 	4200 800  4200 1690
-$Comp
-L BVKSound:PR2301_TruePhantom U2
-U 1 1 60481942
-P 8120 2110
-F 0 "U2" H 8260 2450 50  0000 L CNN
-F 1 "PR2301_TruePhantom" H 8260 2360 50  0000 L CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8320 2460 50  0001 C CNN
-F 3 "" H 8320 2460 50  0001 C CNN
-	1    8120 2110
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8070 1690 8070 1810
 Wire Wire Line
 	4790 3190 4790 3310
-Wire Wire Line
-	8720 2810 8720 2920
-Wire Wire Line
-	8920 2810 8920 2920
-Wire Wire Line
-	8920 2920 8720 2920
-$Comp
-L Device:C C11
-U 1 1 60492E95
-P 9480 1940
-F 0 "C11" H 9595 1986 50  0000 L CNN
-F 1 "100nF" H 9580 1810 50  0000 L CNN
-F 2 "" H 9518 1790 50  0001 C CNN
-F 3 "~" H 9480 1940 50  0001 C CNN
-	1    9480 1940
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9170 2260 9480 2260
-Wire Wire Line
-	9480 2260 9480 2090
-Wire Wire Line
-	9480 1790 9480 1690
-Wire Wire Line
-	9480 1690 8070 1690
-Connection ~ 8070 1690
-$Comp
-L Diode:1N4007 D9
-U 1 1 60497016
-P 7400 2320
-F 0 "D9" H 7400 2537 50  0000 C CNN
-F 1 "1N4007" H 7400 2446 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7400 2145 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7400 2320 50  0001 C CNN
-	1    7400 2320
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4007 D7
-U 1 1 604A496A
-P 7090 2320
-F 0 "D7" H 7090 2537 50  0000 C CNN
-F 1 "1N4007" H 7090 2446 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7090 2145 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7090 2320 50  0001 C CNN
-	1    7090 2320
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 604B3600
-P 7970 3040
-F 0 "R3" H 7760 3100 50  0000 L CNN
-F 1 "6K8" H 7750 3010 50  0000 L CNN
-F 2 "" H 7970 3040 50  0001 C CNN
-F 3 "~" H 7970 3040 50  0001 C CNN
-	1    7970 3040
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R5
-U 1 1 604B3BAB
-P 8270 3030
-F 0 "R5" H 8329 3076 50  0000 L CNN
-F 1 "6K8" H 8329 2985 50  0000 L CNN
-F 2 "" H 8270 3030 50  0001 C CNN
-F 3 "~" H 8270 3030 50  0001 C CNN
-	1    8270 3030
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7970 2940 7970 2810
-Wire Wire Line
-	8270 2930 8270 2810
-Wire Wire Line
-	7090 2170 7090 1690
-Wire Wire Line
-	7400 2170 7400 1690
-Connection ~ 7400 1690
-Wire Wire Line
-	7400 1690 8070 1690
-$Comp
-L Device:R_Small R2
-U 1 1 604C380A
-P 6630 1690
-F 0 "R2" V 6826 1690 50  0000 C CNN
-F 1 "47R" V 6735 1690 50  0000 C CNN
-F 2 "" H 6630 1690 50  0001 C CNN
-F 3 "~" H 6630 1690 50  0001 C CNN
-	1    6630 1690
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7090 1690 7400 1690
-Wire Wire Line
-	6730 1690 6860 1690
-Connection ~ 7090 1690
-Wire Wire Line
-	6530 1690 6180 1690
-Connection ~ 6180 1690
-Text HLabel 8340 3480 2    50   Input ~ 0
-Phantom_48V_COLD_A
-Text HLabel 8040 3610 2    50   Input ~ 0
-Phantom_48V_HOT_A
-Text HLabel 8920 2920 2    50   Input ~ 0
-Phantom_GND
-Text HLabel 8350 5750 2    50   Input ~ 0
-Phantom_48V_COLD_B
-Text HLabel 8050 5880 2    50   Input ~ 0
-Phantom_48V_HOT_B
-Wire Wire Line
-	8340 3480 8270 3480
-Wire Wire Line
-	8270 3480 7090 3480
-Connection ~ 8270 3480
-Wire Wire Line
-	8040 3610 7970 3610
-Wire Wire Line
-	7970 3610 7400 3610
-Connection ~ 7970 3610
-Wire Wire Line
-	8270 3130 8270 3480
-Wire Wire Line
-	7090 2470 7090 3480
-Wire Wire Line
-	7970 3140 7970 3610
-Wire Wire Line
-	7400 2470 7400 3610
-$Comp
-L BVKSound:PR2301_TruePhantom U3
-U 1 1 60A01339
-P 8130 4380
-F 0 "U3" H 8270 4720 50  0000 L CNN
-F 1 "PR2301_TruePhantom" H 8270 4630 50  0000 L CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8330 4730 50  0001 C CNN
-F 3 "" H 8330 4730 50  0001 C CNN
-	1    8130 4380
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8080 3960 8080 4080
-$Comp
-L Device:C C12
-U 1 1 60A01353
-P 9490 4210
-F 0 "C12" H 9605 4256 50  0000 L CNN
-F 1 "100nF" H 9590 4080 50  0000 L CNN
-F 2 "" H 9528 4060 50  0001 C CNN
-F 3 "~" H 9490 4210 50  0001 C CNN
-	1    9490 4210
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9180 4530 9490 4530
-Wire Wire Line
-	9490 4530 9490 4360
-Wire Wire Line
-	9490 4060 9490 3960
-Wire Wire Line
-	9490 3960 8080 3960
-Connection ~ 8080 3960
-$Comp
-L Diode:1N4007 D10
-U 1 1 60A01362
-P 7410 4590
-F 0 "D10" H 7410 4807 50  0000 C CNN
-F 1 "1N4007" H 7410 4716 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7410 4415 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7410 4590 50  0001 C CNN
-	1    7410 4590
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4007 D8
-U 1 1 60A0136C
-P 7100 4590
-F 0 "D8" H 7100 4807 50  0000 C CNN
-F 1 "1N4007" H 7100 4716 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7100 4415 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7100 4590 50  0001 C CNN
-	1    7100 4590
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 60A01376
-P 7980 5310
-F 0 "R4" H 7770 5370 50  0000 L CNN
-F 1 "6K8" H 7760 5280 50  0000 L CNN
-F 2 "" H 7980 5310 50  0001 C CNN
-F 3 "~" H 7980 5310 50  0001 C CNN
-	1    7980 5310
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 60A01380
-P 8280 5300
-F 0 "R6" H 8339 5346 50  0000 L CNN
-F 1 "6K8" H 8339 5255 50  0000 L CNN
-F 2 "" H 8280 5300 50  0001 C CNN
-F 3 "~" H 8280 5300 50  0001 C CNN
-	1    8280 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7980 5210 7980 5080
-Wire Wire Line
-	8280 5200 8280 5080
-Wire Wire Line
-	7100 4440 7100 3960
-Wire Wire Line
-	7410 4440 7410 3960
-Connection ~ 7410 3960
-Wire Wire Line
-	7410 3960 8080 3960
-Wire Wire Line
-	7100 3960 7410 3960
-Connection ~ 7100 3960
-Wire Wire Line
-	8350 5750 8280 5750
-Wire Wire Line
-	8280 5750 7100 5750
-Connection ~ 8280 5750
-Wire Wire Line
-	8050 5880 7980 5880
-Wire Wire Line
-	7980 5880 7410 5880
-Connection ~ 7980 5880
-Wire Wire Line
-	8280 5400 8280 5750
-Wire Wire Line
-	7100 4740 7100 5750
-Wire Wire Line
-	7980 5410 7980 5880
-Wire Wire Line
-	7410 4740 7410 5880
-Wire Wire Line
-	6860 1690 6860 3960
-Connection ~ 6860 1690
-Wire Wire Line
-	6860 1690 7090 1690
-Wire Wire Line
-	6860 3960 7100 3960
 $Comp
 L power:GND #PWR0101
 U 1 1 60A21D51
@@ -770,47 +496,6 @@ Wire Wire Line
 Wire Wire Line
 	5710 4960 5220 4960
 Connection ~ 5220 4960
-Text HLabel 5830 4960 2    50   Input ~ 0
-5V
-Wire Wire Line
-	5710 4960 5830 4960
-Connection ~ 5710 4960
-$Comp
-L power:GND1 #PWR0102
-U 1 1 60B33277
-P 8720 2980
-F 0 "#PWR0102" H 8720 2730 50  0001 C CNN
-F 1 "GND1" H 8725 2807 50  0000 C CNN
-F 2 "" H 8720 2980 50  0001 C CNN
-F 3 "" H 8720 2980 50  0001 C CNN
-	1    8720 2980
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8720 2980 8720 2920
-Connection ~ 8720 2920
-Wire Wire Line
-	8730 5080 8730 5190
-Wire Wire Line
-	8930 5080 8930 5190
-Wire Wire Line
-	8930 5190 8730 5190
-Text HLabel 8930 5190 2    50   Input ~ 0
-Phantom_GND
-$Comp
-L power:GND1 #PWR0103
-U 1 1 60B4CB44
-P 8730 5250
-F 0 "#PWR0103" H 8730 5000 50  0001 C CNN
-F 1 "GND1" H 8735 5077 50  0000 C CNN
-F 2 "" H 8730 5250 50  0001 C CNN
-F 3 "" H 8730 5250 50  0001 C CNN
-	1    8730 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8730 5250 8730 5190
-Connection ~ 8730 5190
 $Comp
 L power:GND1 #PWR0104
 U 1 1 60B63B76
@@ -822,9 +507,46 @@ F 3 "" H 4790 3310 50  0001 C CNN
 	1    4790 3310
 	1    0    0    -1  
 $EndComp
-Text HLabel 5820 5730 2    50   Input ~ 0
-5V_Gnd
-Wire Wire Line
-	5820 5730 5710 5730
 Connection ~ 5710 5730
+$Comp
+L Device:R_Small R?
+U 1 1 604DE1E1
+P 4790 2610
+F 0 "R?" H 4849 2656 50  0000 L CNN
+F 1 "5K6" H 4849 2565 50  0000 L CNN
+F 2 "" H 4790 2610 50  0001 C CNN
+F 3 "~" H 4790 2610 50  0001 C CNN
+	1    4790 2610
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4790 2110 5120 2110
+Connection ~ 4790 2110
+Wire Wire Line
+	4790 2110 4790 1660
+Wire Wire Line
+	5120 2110 5120 2070
+Wire Wire Line
+	4790 2710 4790 3190
+Wire Wire Line
+	4790 2110 4790 2510
+Text GLabel 6930 3190 2    50   Input ~ 0
+Phantom_48V_GND
+Wire Wire Line
+	6930 3190 6180 3190
+Connection ~ 6180 3190
+Text GLabel 6930 1690 2    50   Input ~ 0
+Phantom_48V
+Wire Wire Line
+	6930 1690 6180 1690
+Connection ~ 6180 1690
+Text GLabel 6050 4960 2    50   Input ~ 0
+5V
+Wire Wire Line
+	5710 4960 6050 4960
+Connection ~ 5710 4960
+Text GLabel 6030 5730 2    50   Input ~ 0
+5V_GND
+Wire Wire Line
+	5710 5730 6030 5730
 $EndSCHEMATC

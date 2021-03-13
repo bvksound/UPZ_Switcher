@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 6
+Sheet 1 1
 Title "Microcontroller Board"
 Date "2021-02-28"
 Rev "1"
@@ -113,41 +113,10 @@ F 9 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX232ECPE%2b?qs=1T
 	1    7590 1480
 	1    0    0    -1  
 $EndComp
-$Comp
-L BVKSound:5747844-6 J1
-U 1 1 63464424
-P 11090 1140
-F 0 "J1" V 10909 1140 50  0000 C CNN
-F 1 "5747844-6" V 11000 1140 50  0000 C CNN
-F 2 "57478446" H 11940 1440 50  0001 L CNN
-F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F5747844%7FP%7Fpdf%7FEnglish%7FENG_CD_5747844_P.pdf%7F5747844-6" H 11940 1340 50  0001 L CNN
-F 4 "9 way r/a PCB D socket w/screw lock,6A" H 11940 1240 50  0001 L CNN "Description"
-F 5 "12" H 11940 1140 50  0001 L CNN "Height"
-F 6 "TE Connectivity" H 11940 1040 50  0001 L CNN "Manufacturer_Name"
-F 7 "5747844-6" H 11940 940 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "571-5747844-6" H 11940 840 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/5747844-6?qs=x6EjVpvqMVNBaI3EeeZZVw%3D%3D" H 11940 740 50  0001 L CNN "Mouser Price/Stock"
-F 10 "5747844-6" H 11940 640 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/5747844-6/te-connectivity" H 11940 540 50  0001 L CNN "Arrow Price/Stock"
-	1    11090 1140
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8790 1680 10120 1680
 Wire Wire Line
 	10120 1680 10120 2430
-Wire Wire Line
-	10120 2430 11850 2430
-Wire Wire Line
-	11850 2430 11850 1740
-Wire Wire Line
-	11850 1740 11590 1740
-Wire Wire Line
-	11590 1640 11910 1640
-Wire Wire Line
-	11910 1640 11910 2500
-Wire Wire Line
-	11910 2500 10060 2500
 Wire Wire Line
 	10060 2500 10060 1780
 Wire Wire Line
@@ -186,7 +155,7 @@ U 1 1 6346B389
 P 6790 1580
 F 0 "C19" H 6878 1626 50  0000 L CNN
 F 1 "1uF" H 6878 1535 50  0000 L CNN
-F 2 "" H 6790 1580 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6790 1580 50  0001 C CNN
 F 3 "~" H 6790 1580 50  0001 C CNN
 	1    6790 1580
 	1    0    0    -1  
@@ -201,7 +170,7 @@ U 1 1 634703D5
 P 7250 1290
 F 0 "C22" H 7338 1336 50  0000 L CNN
 F 1 "1uF" H 7338 1245 50  0000 L CNN
-F 2 "" H 7250 1290 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 7250 1290 50  0001 C CNN
 F 3 "~" H 7250 1290 50  0001 C CNN
 	1    7250 1290
 	-1   0    0    1   
@@ -221,7 +190,7 @@ U 1 1 63476199
 P 6790 1880
 F 0 "C20" H 6878 1926 50  0000 L CNN
 F 1 "1uF" H 6878 1835 50  0000 L CNN
-F 2 "" H 6790 1880 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6790 1880 50  0001 C CNN
 F 3 "~" H 6790 1880 50  0001 C CNN
 	1    6790 1880
 	1    0    0    -1  
@@ -240,7 +209,7 @@ U 1 1 6347B1D9
 P 6790 2160
 F 0 "C21" H 6702 2114 50  0000 R CNN
 F 1 "1uF" H 6702 2205 50  0000 R CNN
-F 2 "" H 6790 2160 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6790 2160 50  0001 C CNN
 F 3 "~" H 6790 2160 50  0001 C CNN
 	1    6790 2160
 	-1   0    0    1   
@@ -264,35 +233,6 @@ F 3 "" H 6790 2310 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6790 2310 6790 2260
-$Comp
-L power:GND #PWR0126
-U 1 1 6348982D
-P 12220 1440
-F 0 "#PWR0126" H 12220 1190 50  0001 C CNN
-F 1 "GND" H 12225 1267 50  0000 C CNN
-F 2 "" H 12220 1440 50  0001 C CNN
-F 3 "" H 12220 1440 50  0001 C CNN
-	1    12220 1440
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11590 1440 12220 1440
-Wire Wire Line
-	11590 1540 11780 1540
-Wire Wire Line
-	11780 1540 11780 2370
-Wire Wire Line
-	11780 2370 10190 2370
-Wire Wire Line
-	10190 2370 10190 1740
-Wire Wire Line
-	10190 1740 10590 1740
-Wire Wire Line
-	10590 1640 10450 1640
-Wire Wire Line
-	10450 1640 10450 1540
-Wire Wire Line
-	10450 1540 10590 1540
 $Comp
 L Switch:SW_DIP_x04 SW2
 U 1 1 603D5AFB
@@ -597,4 +537,154 @@ Wire Wire Line
 	9820 4700 9820 1980
 Wire Wire Line
 	8790 1980 9820 1980
+$Comp
+L Connector:DB9_Female J3
+U 1 1 604F5662
+P 11240 3140
+F 0 "J3" H 11420 3186 50  0000 L CNN
+F 1 "FROM PREVIOUS" H 11420 3095 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 11240 3140 50  0001 C CNN
+F 3 " ~" H 11240 3140 50  0001 C CNN
+	1    11240 3140
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male J4
+U 1 1 604F7554
+P 13410 3100
+F 0 "J4" H 13590 3146 50  0000 L CNN
+F 1 "TO NEXT" H 13590 3055 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 13410 3100 50  0001 C CNN
+F 3 " ~" H 13410 3100 50  0001 C CNN
+	1    13410 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10940 3040 10860 3040
+Wire Wire Line
+	10860 3040 10860 3240
+Wire Wire Line
+	10860 3240 10940 3240
+Wire Wire Line
+	13110 3000 13030 3000
+Wire Wire Line
+	13030 3000 13030 3200
+Wire Wire Line
+	13030 3200 13110 3200
+$Comp
+L power:GND #PWR0103
+U 1 1 60503CD7
+P 10870 3640
+F 0 "#PWR0103" H 10870 3390 50  0001 C CNN
+F 1 "GND" H 10875 3467 50  0000 C CNN
+F 2 "" H 10870 3640 50  0001 C CNN
+F 3 "" H 10870 3640 50  0001 C CNN
+	1    10870 3640
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10870 3640 10870 3540
+Wire Wire Line
+	10870 3540 10940 3540
+$Comp
+L power:GND #PWR0104
+U 1 1 6051424F
+P 12880 3640
+F 0 "#PWR0104" H 12880 3390 50  0001 C CNN
+F 1 "GND" H 12885 3467 50  0000 C CNN
+F 2 "" H 12880 3640 50  0001 C CNN
+F 3 "" H 12880 3640 50  0001 C CNN
+	1    12880 3640
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12880 2700 13110 2700
+Wire Wire Line
+	12880 2700 12880 3640
+Wire Wire Line
+	10940 2840 10710 2840
+Wire Wire Line
+	10710 2840 10710 3340
+Wire Wire Line
+	10710 3340 10940 3340
+Wire Wire Line
+	10120 2430 10120 2940
+Wire Wire Line
+	10120 2940 10940 2940
+Connection ~ 10120 2430
+Wire Wire Line
+	10060 2500 10060 3140
+Wire Wire Line
+	10060 3140 10940 3140
+Connection ~ 10060 2500
+Wire Wire Line
+	12310 2500 12310 3300
+Wire Wire Line
+	12310 3300 13110 3300
+Wire Wire Line
+	12420 2430 12420 3100
+Wire Wire Line
+	12420 3100 13110 3100
+Wire Wire Line
+	10060 2500 12310 2500
+Wire Wire Line
+	10120 2430 12420 2430
+$Comp
+L BVKSound:71918-110LF J2
+U 1 1 6055C082
+P 6910 6550
+F 0 "J2" H 7438 6053 60  0000 L CNN
+F 1 "TO RELAY" H 7438 5947 60  0000 L CNN
+F 2 "BVKSound:71918-110LF" H 7310 5890 60  0001 C CNN
+F 3 "" H 6910 6550 60  0000 C CNN
+	1    6910 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5680 6550 6910 6550
+Wire Wire Line
+	5680 4300 5680 6550
+Wire Wire Line
+	5990 4400 5990 6650
+Wire Wire Line
+	5990 6650 6910 6650
+Wire Wire Line
+	6360 5700 6360 6750
+Wire Wire Line
+	6360 6750 6910 6750
+Connection ~ 6360 5700
+Wire Wire Line
+	6590 5500 6590 6950
+Wire Wire Line
+	6590 6950 6910 6950
+Connection ~ 6590 5500
+$Comp
+L BVKSound:71918-110LF J1
+U 1 1 60579496
+P 5190 6550
+F 0 "J1" H 5830 6100 60  0000 C CNN
+F 1 "FROM PSU" H 5960 5980 60  0000 C CNN
+F 2 "BVKSound:71918-110LF" H 5590 5890 60  0001 C CNN
+F 3 "" H 5190 6550 60  0000 C CNN
+	1    5190 6550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5190 7450 6910 7450
+Wire Wire Line
+	6910 7350 5190 7350
+Wire Wire Line
+	5190 7250 6910 7250
+Wire Wire Line
+	5190 7150 6910 7150
+Wire Wire Line
+	5190 7050 6910 7050
+Wire Wire Line
+	5190 6950 6590 6950
+Connection ~ 6590 6950
+Wire Wire Line
+	5190 6750 6360 6750
+Wire Wire Line
+	6360 6750 6360 6740
+Connection ~ 6360 6750
 $EndSCHEMATC
