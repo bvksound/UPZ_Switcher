@@ -74,10 +74,7 @@ F7 "I2C_SDA" I L 6110 2820 50
 F8 "I2C_SCK" I L 6110 2900 50 
 F9 "VDD" I L 6110 2990 50 
 F10 "GND" I L 6110 3070 50 
-F11 "5V_Relay" I L 6110 3150 50 
 $EndSheet
-Wire Wire Line
-	6110 3150 5440 3150
 Wire Wire Line
 	6110 3070 5520 3070
 Wire Wire Line
@@ -109,11 +106,6 @@ Wire Wire Line
 Wire Wire Line
 	6110 2990 5440 2990
 Wire Wire Line
-	5440 2990 5440 3150
-Connection ~ 5440 3150
-Wire Wire Line
-	5440 3150 5440 3450
-Wire Wire Line
 	5270 1660 5760 1660
 Wire Wire Line
 	5760 1660 5760 2820
@@ -125,4 +117,6 @@ Wire Wire Line
 	5700 1730 5700 2900
 Wire Wire Line
 	5700 2900 6110 2900
+Wire Wire Line
+	5440 2990 5440 3450
 $EndSCHEMATC

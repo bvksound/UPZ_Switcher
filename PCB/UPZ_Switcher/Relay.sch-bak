@@ -1997,6 +1997,94 @@ Wire Wire Line
 Connection ~ 9760 7530
 Wire Wire Line
 	9880 6700 9760 6700
+Entry Wire Line
+	9900 5100 10000 5200
+Entry Wire Line
+	9900 5210 10000 5310
+Entry Wire Line
+	9900 5320 10000 5420
+Entry Wire Line
+	9900 5430 10000 5530
+Entry Wire Line
+	9900 5530 10000 5630
+Entry Wire Line
+	9900 5630 10000 5730
+Entry Wire Line
+	9900 5740 10000 5840
+Entry Wire Line
+	9900 5840 10000 5940
+Entry Wire Line
+	9900 5950 10000 6050
+Entry Wire Line
+	9900 6040 10000 6140
+Wire Wire Line
+	10000 5200 10470 5200
+Wire Wire Line
+	10470 5200 10470 5310
+Text Label 10000 5200 0    50   ~ 0
+IN1.4
+Wire Wire Line
+	10000 5310 10470 5310
+Connection ~ 10470 5310
+Wire Wire Line
+	10470 5310 10470 5420
+Wire Wire Line
+	10000 5420 10470 5420
+Connection ~ 10470 5420
+Wire Wire Line
+	10470 5420 10470 5530
+Wire Wire Line
+	10000 5530 10470 5530
+Connection ~ 10470 5530
+Wire Wire Line
+	10470 5530 10470 5630
+Wire Wire Line
+	10000 5630 10470 5630
+Connection ~ 10470 5630
+Wire Wire Line
+	10000 5730 10470 5730
+Wire Wire Line
+	10000 5840 10470 5840
+Connection ~ 10470 5840
+Wire Wire Line
+	10470 5840 10470 5940
+Wire Wire Line
+	10470 5630 10470 5730
+Connection ~ 10470 5730
+Wire Wire Line
+	10470 5730 10470 5840
+Text Label 10000 5310 0    50   ~ 0
+IN2.4
+Text Label 10000 5420 0    50   ~ 0
+IN3.4
+Text Label 10000 5530 0    50   ~ 0
+IN4.4
+Text Label 10000 5630 0    50   ~ 0
+IN5.4
+Text Label 10000 5730 0    50   ~ 0
+IN6.4
+Text Label 10000 5840 0    50   ~ 0
+IN7.4
+Wire Wire Line
+	10000 5940 10470 5940
+Connection ~ 10470 5940
+Wire Wire Line
+	10470 5940 10470 6050
+Text Label 10000 5940 0    50   ~ 0
+IN8.4
+Wire Wire Line
+	10000 6050 10470 6050
+Connection ~ 10470 6050
+Wire Wire Line
+	10470 6050 10470 6140
+Text Label 10000 6050 0    50   ~ 0
+BUSAMH
+Wire Wire Line
+	10000 6140 10470 6140
+Text Label 10000 6140 0    50   ~ 0
+BUSBMH
+Wire Bus Line
+	9900 4840 9190 4840
 Wire Bus Line
 	8040 4840 8040 6240
 Wire Bus Line
@@ -2039,4 +2127,7 @@ Wire Bus Line
 	8040 6240 8040 9700
 Wire Bus Line
 	4050 4840 4050 9740
+Wire Bus Line
+	9900 4840 9900 6050
+Connection ~ 9190 4840
 $EndSCHEMATC
