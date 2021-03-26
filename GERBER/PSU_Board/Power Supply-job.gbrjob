@@ -7,20 +7,20 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.9)-1"
     },
-    "CreationDate":  "2021-03-26T17:14:50+01:00"
+    "CreationDate":  "2021-03-26T17:10:42+01:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "Microcontroller",
-      "GUID": "4d696372-6f63-46f6-9e74-726f6c6c6572",
+      "Name": "Power Supply",
+      "GUID": "506f7765-7220-4537-9570-706c792e6b69",
       "Revision": "rev?"
     },
     "Size":
     {
-      "X": 194.010,
-      "Y": 48.010
+      "X": 160.010,
+      "Y": 50.010
     },
     "LayerNumber": 2,
     "BoardThickness":  1.600
@@ -38,47 +38,47 @@
   "FilesAttributes":
   [
     {
-      "Path":  "Microcontroller-F_Cu.gbr",
+      "Path":  "Power Supply-F_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-B_Cu.gbr",
+      "Path":  "Power Supply-B_Cu.gbr",
       "FileFunction":  "Copper,L2,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-F_Paste.gbr",
+      "Path":  "Power Supply-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-B_Paste.gbr",
+      "Path":  "Power Supply-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-F_SilkS.gbr",
+      "Path":  "Power Supply-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-B_SilkS.gbr",
+      "Path":  "Power Supply-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Microcontroller-F_Mask.gbr",
+      "Path":  "Power Supply-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "Microcontroller-B_Mask.gbr",
+      "Path":  "Power Supply-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "Microcontroller-Edge_Cuts.gbr",
+      "Path":  "Power Supply-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }

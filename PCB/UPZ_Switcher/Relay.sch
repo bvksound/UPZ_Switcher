@@ -22,13 +22,13 @@ Wire Wire Line
 Wire Wire Line
 	770  1500 2000 1500
 Text Label 1730 3010 0    50   ~ 0
-BUSA.2
-Text Label 1730 2920 0    50   ~ 0
-IN1.2
-Text Label 1730 2540 0    50   ~ 0
-IN1.3
-Text Label 1730 2440 0    50   ~ 0
 BUSA.3
+Text Label 1730 2920 0    50   ~ 0
+IN1.3
+Text Label 1730 2540 0    50   ~ 0
+IN1.2
+Text Label 1730 2440 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	2100 2910 2000 3010
 Entry Wire Line
@@ -135,13 +135,13 @@ Wire Wire Line
 Wire Wire Line
 	2720 1500 3950 1500
 Text Label 3680 3010 0    50   ~ 0
-BUSA.2
-Text Label 3680 2920 0    50   ~ 0
-IN2.2
-Text Label 3680 2540 0    50   ~ 0
-IN2.3
-Text Label 3680 2440 0    50   ~ 0
 BUSA.3
+Text Label 3680 2920 0    50   ~ 0
+IN2.3
+Text Label 3680 2540 0    50   ~ 0
+IN2.2
+Text Label 3680 2440 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	4050 2910 3950 3010
 Entry Wire Line
@@ -248,13 +248,13 @@ Wire Wire Line
 Wire Wire Line
 	4710 1510 5940 1510
 Text Label 5670 3020 0    50   ~ 0
-BUSA.2
-Text Label 5670 2930 0    50   ~ 0
-IN3.2
-Text Label 5670 2550 0    50   ~ 0
-IN3.3
-Text Label 5670 2450 0    50   ~ 0
 BUSA.3
+Text Label 5670 2930 0    50   ~ 0
+IN3.3
+Text Label 5670 2550 0    50   ~ 0
+IN3.2
+Text Label 5670 2450 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	6040 2920 5940 3020
 Entry Wire Line
@@ -361,13 +361,11 @@ Wire Wire Line
 Wire Wire Line
 	6710 1520 7940 1520
 Text Label 7670 3030 0    50   ~ 0
-BUSA.2
-Text Label 7670 2940 0    50   ~ 0
-IN4.2
-Text Label 7670 2560 0    50   ~ 0
-IN4.3
-Text Label 7670 2460 0    50   ~ 0
 BUSA.3
+Text Label 7670 2940 0    50   ~ 0
+IN4.3
+Text Label 7670 2560 0    50   ~ 0
+IN4.2
 Entry Wire Line
 	8040 2930 7940 3030
 Entry Wire Line
@@ -474,13 +472,13 @@ Wire Wire Line
 Wire Wire Line
 	8670 1520 9900 1520
 Text Label 9630 3030 0    50   ~ 0
-BUSA.2
-Text Label 9630 2940 0    50   ~ 0
-IN5.2
-Text Label 9630 2560 0    50   ~ 0
-IN5.3
-Text Label 9630 2460 0    50   ~ 0
 BUSA.3
+Text Label 9630 2940 0    50   ~ 0
+IN5.3
+Text Label 9630 2560 0    50   ~ 0
+IN5.2
+Text Label 9630 2460 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	10000 2930 9900 3030
 Entry Wire Line
@@ -587,13 +585,13 @@ Wire Wire Line
 Wire Wire Line
 	10650 1550 11880 1550
 Text Label 11610 3060 0    50   ~ 0
-BUSA.2
-Text Label 11610 2970 0    50   ~ 0
-IN6.2
-Text Label 11610 2590 0    50   ~ 0
-IN6.3
-Text Label 11610 2490 0    50   ~ 0
 BUSA.3
+Text Label 11610 2970 0    50   ~ 0
+IN6.3
+Text Label 11610 2590 0    50   ~ 0
+IN6.2
+Text Label 11610 2490 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	11980 2960 11880 3060
 Entry Wire Line
@@ -700,13 +698,13 @@ Wire Wire Line
 Wire Wire Line
 	12610 1520 13840 1520
 Text Label 13570 3030 0    50   ~ 0
-BUSA.2
-Text Label 13570 2940 0    50   ~ 0
-IN7.2
-Text Label 13570 2560 0    50   ~ 0
-IN7.3
-Text Label 13570 2460 0    50   ~ 0
 BUSA.3
+Text Label 13570 2940 0    50   ~ 0
+IN7.3
+Text Label 13570 2560 0    50   ~ 0
+IN7.2
+Text Label 13570 2460 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	13940 2930 13840 3030
 Entry Wire Line
@@ -813,13 +811,13 @@ Wire Wire Line
 Wire Wire Line
 	14490 1520 15720 1520
 Text Label 15450 3030 0    50   ~ 0
-BUSA.2
-Text Label 15450 2940 0    50   ~ 0
-IN8.2
-Text Label 15450 2560 0    50   ~ 0
-IN8.3
-Text Label 15450 2460 0    50   ~ 0
 BUSA.3
+Text Label 15450 2940 0    50   ~ 0
+IN8.3
+Text Label 15450 2560 0    50   ~ 0
+IN8.2
+Text Label 15450 2460 0    50   ~ 0
+BUSA.2
 Entry Wire Line
 	15820 2930 15720 3030
 Entry Wire Line
@@ -967,13 +965,13 @@ Wire Wire Line
 Wire Wire Line
 	2060 6190 2590 6190
 Text Label 3690 6640 0    50   ~ 0
-BUSA.2
+BUSA.3
 Wire Wire Line
 	3680 6190 3680 6560
 Wire Wire Line
 	3640 6290 3950 6290
 Text Label 3690 6290 0    50   ~ 0
-BUSA.3
+BUSA.2
 Text Notes 2290 5410 0    118  ~ 24
 BUS A Phantom
 $Comp
@@ -1012,13 +1010,13 @@ Wire Wire Line
 Wire Wire Line
 	6050 6170 6580 6170
 Text Label 7680 6620 0    50   ~ 0
-BUSB.2
+BUSB.3
 Wire Wire Line
 	7670 6170 7670 6540
 Wire Wire Line
 	7630 6270 7940 6270
 Text Label 7680 6270 0    50   ~ 0
-BUSB.3
+BUSB.2
 Text Notes 6280 5390 0    118  ~ 24
 BUS B Phantom
 $Comp
@@ -1108,13 +1106,13 @@ Wire Wire Line
 Wire Wire Line
 	1690 4060 2000 4060
 Text Label 1730 4630 0    50   ~ 0
-BUSB.2
-Text Label 1730 4540 0    50   ~ 0
-IN1.2
-Text Label 1730 4160 0    50   ~ 0
-IN1.3
-Text Label 1730 4060 0    50   ~ 0
 BUSB.3
+Text Label 1730 4540 0    50   ~ 0
+IN1.3
+Text Label 1730 4160 0    50   ~ 0
+IN1.2
+Text Label 1730 4060 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	2100 4530 2000 4630
 Entry Wire Line
@@ -1164,13 +1162,13 @@ Wire Wire Line
 Wire Wire Line
 	3640 4080 3950 4080
 Text Label 3680 4650 0    50   ~ 0
-BUSB.2
-Text Label 3680 4560 0    50   ~ 0
-IN2.2
-Text Label 3680 4180 0    50   ~ 0
-IN2.3
-Text Label 3680 4080 0    50   ~ 0
 BUSB.3
+Text Label 3680 4560 0    50   ~ 0
+IN2.3
+Text Label 3680 4180 0    50   ~ 0
+IN2.2
+Text Label 3680 4080 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	4050 4550 3950 4650
 Entry Wire Line
@@ -1217,13 +1215,13 @@ Wire Wire Line
 Wire Wire Line
 	5630 4070 5940 4070
 Text Label 5670 4640 0    50   ~ 0
-BUSB.2
-Text Label 5670 4550 0    50   ~ 0
-IN3.2
-Text Label 5670 4170 0    50   ~ 0
-IN3.3
-Text Label 5670 4070 0    50   ~ 0
 BUSB.3
+Text Label 5670 4550 0    50   ~ 0
+IN3.3
+Text Label 5670 4170 0    50   ~ 0
+IN3.2
+Text Label 5670 4070 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	6040 4540 5940 4640
 Entry Wire Line
@@ -1270,13 +1268,13 @@ Wire Wire Line
 Wire Wire Line
 	7630 4080 7940 4080
 Text Label 7670 4650 0    50   ~ 0
-BUSB.2
-Text Label 7670 4560 0    50   ~ 0
-IN4.2
-Text Label 7670 4180 0    50   ~ 0
-IN4.3
-Text Label 7670 4080 0    50   ~ 0
 BUSB.3
+Text Label 7670 4560 0    50   ~ 0
+IN4.3
+Text Label 7670 4180 0    50   ~ 0
+IN4.2
+Text Label 7670 4080 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	8040 4550 7940 4650
 Entry Wire Line
@@ -1323,13 +1321,13 @@ Wire Wire Line
 Wire Wire Line
 	9590 4070 9900 4070
 Text Label 9630 4640 0    50   ~ 0
-BUSB.2
-Text Label 9630 4550 0    50   ~ 0
-IN5.2
-Text Label 9630 4170 0    50   ~ 0
-IN5.3
-Text Label 9630 4070 0    50   ~ 0
 BUSB.3
+Text Label 9630 4550 0    50   ~ 0
+IN5.3
+Text Label 9630 4170 0    50   ~ 0
+IN5.2
+Text Label 9630 4070 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	10000 4540 9900 4640
 Entry Wire Line
@@ -1385,13 +1383,13 @@ Wire Wire Line
 Wire Wire Line
 	11570 4070 11880 4070
 Text Label 11610 4640 0    50   ~ 0
-BUSB.2
-Text Label 11610 4550 0    50   ~ 0
-IN6.2
-Text Label 11610 4170 0    50   ~ 0
-IN6.3
-Text Label 11610 4070 0    50   ~ 0
 BUSB.3
+Text Label 11610 4550 0    50   ~ 0
+IN6.3
+Text Label 11610 4170 0    50   ~ 0
+IN6.2
+Text Label 11610 4070 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	11980 4540 11880 4640
 Entry Wire Line
@@ -1438,13 +1436,13 @@ Wire Wire Line
 Wire Wire Line
 	13530 4070 13840 4070
 Text Label 13570 4640 0    50   ~ 0
-BUSB.2
-Text Label 13570 4550 0    50   ~ 0
-IN7.2
-Text Label 13570 4170 0    50   ~ 0
-IN7.3
-Text Label 13570 4070 0    50   ~ 0
 BUSB.3
+Text Label 13570 4550 0    50   ~ 0
+IN7.3
+Text Label 13570 4170 0    50   ~ 0
+IN7.2
+Text Label 13570 4070 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	13940 4540 13840 4640
 Entry Wire Line
@@ -1491,13 +1489,13 @@ Wire Wire Line
 Wire Wire Line
 	15410 4060 15720 4060
 Text Label 15450 4630 0    50   ~ 0
-BUSB.2
-Text Label 15450 4540 0    50   ~ 0
-IN8.2
-Text Label 15450 4160 0    50   ~ 0
-IN8.3
-Text Label 15450 4060 0    50   ~ 0
 BUSB.3
+Text Label 15450 4540 0    50   ~ 0
+IN8.3
+Text Label 15450 4160 0    50   ~ 0
+IN8.2
+Text Label 15450 4060 0    50   ~ 0
+BUSB.2
 Entry Wire Line
 	15820 4530 15720 4630
 Entry Wire Line
@@ -1689,9 +1687,9 @@ K18+
 Text GLabel 7630 5970 2    50   Input ~ 0
 K18-
 Text Label 3060 9370 0    50   ~ 0
-BUSA.3
+BUSA.2
 Text Label 3700 9270 0    50   ~ 0
-OUTA.3
+OUTA.2
 Wire Wire Line
 	1930 9370 1930 9750
 Wire Wire Line
@@ -1734,11 +1732,11 @@ Entry Wire Line
 Entry Wire Line
 	4050 9740 3950 9840
 Text Label 3070 9750 0    50   ~ 0
-BUSA.2
+BUSA.3
 Text Label 6950 9320 0    50   ~ 0
-BUSB.3
+BUSB.2
 Text Label 7660 9220 0    50   ~ 0
-OUTB.3
+OUTB.2
 Wire Wire Line
 	5820 9320 5820 9700
 Wire Wire Line
@@ -1781,102 +1779,13 @@ Entry Wire Line
 Entry Wire Line
 	8040 9690 7940 9790
 Text Label 7670 9790 0    50   ~ 0
-OUTB.2
+OUTB.3
 Text Label 6960 9700 0    50   ~ 0
-BUSB.2
+BUSB.3
 Wire Bus Line
 	9190 9860 9170 9860
-Entry Wire Line
-	9190 5090 9290 5190
-Entry Wire Line
-	9190 5200 9290 5300
-Entry Wire Line
-	9190 5310 9290 5410
-Entry Wire Line
-	9190 5420 9290 5520
-Entry Wire Line
-	9190 5520 9290 5620
-Entry Wire Line
-	9190 5620 9290 5720
-Entry Wire Line
-	9190 5730 9290 5830
-Entry Wire Line
-	9190 5830 9290 5930
-Entry Wire Line
-	9190 5940 9290 6040
-Entry Wire Line
-	9190 6030 9290 6130
-Wire Wire Line
-	9290 5190 9760 5190
-Wire Wire Line
-	9760 5190 9760 5300
 Wire Wire Line
 	9760 9830 9780 9830
-Text Label 9290 5190 0    50   ~ 0
-IN1.5
-Wire Wire Line
-	9290 5300 9760 5300
-Connection ~ 9760 5300
-Wire Wire Line
-	9760 5300 9760 5410
-Wire Wire Line
-	9290 5410 9760 5410
-Connection ~ 9760 5410
-Wire Wire Line
-	9760 5410 9760 5520
-Wire Wire Line
-	9290 5520 9760 5520
-Connection ~ 9760 5520
-Wire Wire Line
-	9760 5520 9760 5620
-Wire Wire Line
-	9290 5620 9760 5620
-Connection ~ 9760 5620
-Wire Wire Line
-	9290 5720 9760 5720
-Wire Wire Line
-	9290 5830 9760 5830
-Connection ~ 9760 5830
-Wire Wire Line
-	9760 5830 9760 5930
-Wire Wire Line
-	9760 5620 9760 5720
-Connection ~ 9760 5720
-Wire Wire Line
-	9760 5720 9760 5830
-Text Label 9290 5300 0    50   ~ 0
-IN2.5
-Text Label 9290 5410 0    50   ~ 0
-IN3.5
-Text Label 9290 5520 0    50   ~ 0
-IN4.5
-Text Label 9290 5620 0    50   ~ 0
-IN5.5
-Text Label 9290 5720 0    50   ~ 0
-IN6.5
-Text Label 9290 5830 0    50   ~ 0
-IN7.5
-Wire Wire Line
-	9290 5930 9760 5930
-Connection ~ 9760 5930
-Wire Wire Line
-	9760 5930 9760 6040
-Text Label 9290 5930 0    50   ~ 0
-IN8.5
-Wire Wire Line
-	9290 6040 9760 6040
-Connection ~ 9760 6040
-Wire Wire Line
-	9760 6040 9760 6130
-Text Label 9290 6040 0    50   ~ 0
-BUSA.G
-Wire Wire Line
-	9290 6130 9760 6130
-Text Label 9290 6130 0    50   ~ 0
-BUSB.G
-Wire Bus Line
-	9190 4840 8040 4840
-Connection ~ 8040 4840
 Entry Wire Line
 	9190 6490 9290 6590
 Entry Wire Line
@@ -1971,95 +1880,6 @@ Wire Wire Line
 Connection ~ 9760 7530
 Wire Wire Line
 	9880 6700 9760 6700
-Entry Wire Line
-	9900 5100 10000 5200
-Entry Wire Line
-	9900 5210 10000 5310
-Entry Wire Line
-	9900 5320 10000 5420
-Entry Wire Line
-	9900 5430 10000 5530
-Entry Wire Line
-	9900 5530 10000 5630
-Entry Wire Line
-	9900 5630 10000 5730
-Entry Wire Line
-	9900 5740 10000 5840
-Entry Wire Line
-	9900 5840 10000 5940
-Entry Wire Line
-	9900 5950 10000 6050
-Entry Wire Line
-	9900 6040 10000 6140
-Wire Wire Line
-	10000 5200 10470 5200
-Wire Wire Line
-	10470 5200 10470 5310
-Text Label 10000 5200 0    50   ~ 0
-IN1.4
-Wire Wire Line
-	10000 5310 10470 5310
-Connection ~ 10470 5310
-Wire Wire Line
-	10470 5310 10470 5420
-Wire Wire Line
-	10000 5420 10470 5420
-Connection ~ 10470 5420
-Wire Wire Line
-	10470 5420 10470 5530
-Wire Wire Line
-	10000 5530 10470 5530
-Connection ~ 10470 5530
-Wire Wire Line
-	10470 5530 10470 5630
-Wire Wire Line
-	10000 5630 10470 5630
-Connection ~ 10470 5630
-Wire Wire Line
-	10000 5730 10470 5730
-Wire Wire Line
-	10000 5840 10470 5840
-Connection ~ 10470 5840
-Wire Wire Line
-	10470 5840 10470 5940
-Wire Wire Line
-	10470 5630 10470 5730
-Connection ~ 10470 5730
-Wire Wire Line
-	10470 5730 10470 5840
-Text Label 10000 5310 0    50   ~ 0
-IN2.4
-Text Label 10000 5420 0    50   ~ 0
-IN3.4
-Text Label 10000 5530 0    50   ~ 0
-IN4.4
-Text Label 10000 5630 0    50   ~ 0
-IN5.4
-Text Label 10000 5730 0    50   ~ 0
-IN6.4
-Text Label 10000 5840 0    50   ~ 0
-IN7.4
-Wire Wire Line
-	10000 5940 10470 5940
-Connection ~ 10470 5940
-Wire Wire Line
-	10470 5940 10470 6050
-Text Label 10000 5940 0    50   ~ 0
-IN8.4
-Wire Wire Line
-	10000 6050 10470 6050
-Connection ~ 10470 6050
-Wire Wire Line
-	10470 6050 10470 6140
-Text Label 10000 6050 0    50   ~ 0
-BUSAMH
-Wire Wire Line
-	10000 6140 10470 6140
-Text Label 10000 6140 0    50   ~ 0
-BUSBMH
-Wire Bus Line
-	9900 4840 9190 4840
-Connection ~ 9190 4840
 $Comp
 L Device:R_Small_US R45
 U 1 1 6051E38C
@@ -2215,9 +2035,7 @@ F 3 "~" H 3570 9840 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 3700 9840 0    50   ~ 0
-OUTA.2
-Wire Bus Line
-	8040 4840 8040 6240
+OUTA.3
 Wire Bus Line
 	15820 3300 15820 4530
 Wire Bus Line
@@ -2233,7 +2051,7 @@ Wire Bus Line
 Wire Bus Line
 	2100 3300 2100 4530
 Wire Bus Line
-	8040 3320 8040 4840
+	8040 3320 8040 6240
 Wire Bus Line
 	8040 6240 8040 9700
 Wire Bus Line
@@ -2253,11 +2071,9 @@ Wire Bus Line
 Wire Bus Line
 	2100 1040 2100 3300
 Wire Bus Line
-	9190 4840 9190 6040
-Wire Bus Line
 	9190 6240 9190 7440
 Wire Bus Line
 	4050 4840 4050 9740
-Wire Bus Line
-	9900 4840 9900 6050
+Text Label 7670 2460 0    50   ~ 0
+BUSA.2
 $EndSCHEMATC

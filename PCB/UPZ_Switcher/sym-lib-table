@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Main_Relay_Board-rescue)(type Legacy)(uri ${KIPRJMOD}/Main_Relay_Board-rescue.lib)(options "")(descr ""))
+  (lib (name UPZ_Switcher-rescue)(type Legacy)(uri ${KIPRJMOD}/UPZ_Switcher-rescue.lib)(options "")(descr ""))
+)
