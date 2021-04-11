@@ -36,8 +36,7 @@ bool ledblinkstate_BUSA = false;
 bool ledblinkstate_BUSB = false;
 bool ledblinkstart_BUSA = false;
 bool ledblinkstart_BUSB = false;
-const int blinkspeed_BUSA = 400;
-const int blinkspeed_BUSB = 400;
+const int blinkspeed_BUS = 400;
 
 // MCP23017 Address 0
 const int INPUT_1_BUSA = 8;         //GPB0
@@ -206,8 +205,7 @@ void setup() {
 void loop() {
     ReceiveNewData(); //Look for any incoming RS232 packets. When terminated with <CR> '/n' execute ParseData
     ParseData(); //Whenever data has been received with correct termination, execute right actions.
-    CheckBlink_BUSA(); //Function to check if any input led needs blinking on BUSA if Phantom Power would be set.
-    CheckBlink_BUSB(); //Function to check if any input led needs blinking on BUSB if Phantom Power would be set.
+    CheckBlink_BUS(); //Function to check if any input led needs blinking on BUS A-B if Phantom Power would be set.
 }
 
 void ReceiveNewData() {
@@ -589,43 +587,40 @@ int ReadAddressOutputSwitcher(){
      return 0;
 }
 
-void CheckBlink_BUSA(){
-  static unsigned long previousblinktime_BUSA = 0;
-  unsigned long currentblinktime_BUSA = millis();
-  if (currentblinktime_BUSA - previousblinktime_BUSA > blinkspeed_BUSA && ledblinkstart_BUSA == HIGH)
+void CheckBlink_BUS(){
+  static unsigned long previousblinktime_BUS = 0;
+  unsigned long currentblinktime_BUS = millis();
+  if (currentblinktime_BUS - previousblinktime_BUS > blinkspeed_BUS && (ledblinkstart_BUSA == HIGH || ledblinkstart_BUSB == HIGH))
   {
-    previousblinktime_BUSA = currentblinktime_BUSA;
-    if( ledblinkstate_BUSA == false){
-      ledblinkstate_BUSA = true;
-      SetSingleChannel('A',CurrentChannel_BUSA,'L',HIGH);
-   }
-    else{
-      ledblinkstate_BUSA = false;
-      SetSingleChannel('A',CurrentChannel_BUSA,'L',LOW);
+    previousblinktime_BUS = currentblinktime_BUS;
+    if (ledblinkstart_BUSA == HIGH)
+    {
+      if(ledblinkstate_BUSA == false){
+        ledblinkstate_BUSA = true;
+        SetSingleChannel('A',CurrentChannel_BUSA,'L',HIGH);
+      }
+      else{
+        ledblinkstate_BUSA = false;
+        SetSingleChannel('A',CurrentChannel_BUSA,'L',LOW);
+      }
     }
-  }
+    if (ledblinkstart_BUSB == HIGH)
+    {
+      if(ledblinkstate_BUSB == false){
+        ledblinkstate_BUSB = true;
+        SetSingleChannel('B',CurrentChannel_BUSB,'L',HIGH);
+      }
+      else{
+        ledblinkstate_BUSB = false;
+        SetSingleChannel('B',CurrentChannel_BUSB,'L',LOW);
+      }
+    }
   if(ledblinkstart_BUSA == LOW && CurrentChannel_BUSA != 0){
     SetSingleChannel('A',CurrentChannel_BUSA,'L',HIGH);
   }
-}
-
-void CheckBlink_BUSB(){
-  static unsigned long previousblinktime_BUSB = 0;
-  unsigned long currentblinktime_BUSB = millis();
-  if (currentblinktime_BUSB - previousblinktime_BUSB > blinkspeed_BUSB  && ledblinkstart_BUSB == HIGH)
-  {
-    previousblinktime_BUSB = currentblinktime_BUSB;
-    if( ledblinkstate_BUSB == false){
-      ledblinkstate_BUSB = true;
-      SetSingleChannel('B',CurrentChannel_BUSB,'L',HIGH);
-    }
-    else{
-      ledblinkstate_BUSB = false;
-      SetSingleChannel('B',CurrentChannel_BUSB,'L',LOW);
-    }
-  }
   if(ledblinkstart_BUSB == LOW && CurrentChannel_BUSB != 0){
     SetSingleChannel('B',CurrentChannel_BUSB,'L',HIGH);
+  }
   }
 }
 
